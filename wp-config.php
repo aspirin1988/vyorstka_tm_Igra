@@ -20,13 +20,13 @@
 
 // ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
-define('DB_NAME', 'new_school_frontend');
+define('DB_NAME', 'vyorstka_tm_Igra');
 
 /** Имя пользователя MySQL */
-define('DB_USER', 'root');
+define('DB_USER', 'vyorstka_tm_Igra');
 
 /** Пароль к базе данных MySQL */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', '123456');
 //school_admin
 //@Tp8KX)H(co4XkWU&H password
 /** Имя сервера MySQL */
