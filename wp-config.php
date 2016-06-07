@@ -27,8 +27,8 @@ define('DB_USER', 'vyorstka_tm_Igra');
 
 /** Пароль к базе данных MySQL */
 define('DB_PASSWORD', '123456');
-//school_admin
-//@Tp8KX)H(co4XkWU&H password
+//igra_admin
+//Q(w2JpJzXLGD!crSjZ password
 /** Имя сервера MySQL */
 define('DB_HOST', 'localhost');
 

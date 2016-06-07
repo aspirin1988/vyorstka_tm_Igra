@@ -611,8 +611,8 @@
 			loop: true,
 			nav: true,
 			navText: [
-				"<img class='to-animate-2' src='images/igra/arrow-left.png'>",
-				"<img class='to-animate-2' src='images/igra/arrow-right.png'>"
+				"<img class='to-animate-2' src='/wp-content/themes/vyorstka_tm_igra/public/images/igra/arrow-left.png'>",
+				"<img class='to-animate-2' src='/wp-content/themes/vyorstka_tm_igra/public/images/igra/arrow-right.png'>"
 			],
 			responsive: { // responsive behaviour
 				0:{
@@ -632,8 +632,8 @@
 			loop: true,
 			nav: true,
 			navText: [
-				"<img class='to-animate-2' src='images/igra/arrow-left.png'>",
-				"<img class='to-animate-2' src='images/igra/arrow-right.png'>"
+				"<img class='to-animate-2' src='/wp-content/themes/vyorstka_tm_igra/public/images/igra/arrow-left.png'>",
+				"<img class='to-animate-2' src='/wp-content/themes/vyorstka_tm_igra/public/images/igra/arrow-right.png'>"
 			],
 			responsive: { // responsive behaviour
 				0:{
