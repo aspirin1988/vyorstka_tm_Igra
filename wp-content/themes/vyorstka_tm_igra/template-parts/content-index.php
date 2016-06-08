@@ -56,7 +56,7 @@
 					<div class="fh5co-h-row-2 to-animate-2">
 						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($post[1]->ID)?>)"></div>
 						<div class="fh5co-v-col-2 fh5co-text arrow-left">
-							<h3><?=$post[1]->post_title?></h3>
+							<a href="<?=get_permalink($post[1]->ID)?>"><h3><?=$post[1]->post_title?></h3></a>
 							<span class="pricing"><?=get_field('price',$post[1]->ID)?></span>
 							<p><?=mb_substr(strip_tags($post[1]->post_content),0,128);?></p>
 						</div>
@@ -64,7 +64,7 @@
 					<div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
 						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($post[2]->ID)?>)"></div>
 						<div class="fh5co-v-col-2 fh5co-text arrow-right">
-							<h3><?=$post[2]->post_title?></h3>
+							<a href="<?=get_permalink($post[2]->ID)?>"><h3><?=$post[2]->post_title?></h3></a>
 							<span class="pricing"><?=get_field('price',$post[2]->ID)?></span>
 							<p><?=mb_substr(strip_tags($post[2]->post_content),0,128);?></p>
 						</div>
@@ -74,7 +74,7 @@
 					<div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
 						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($post[3]->ID)?>)"></div>
 						<div class="fh5co-v-col-2 fh5co-text arrow-right">
-							<h3><?=$post[3]->post_title?></h3>
+							<a href="<?=get_permalink($post[3]->ID)?>"><h3><?=$post[3]->post_title?></h3></a>
 							<span class="pricing"><?=get_field('price',$post[3]->ID)?></span>
 							<p><?=mb_substr(strip_tags($post[3]->post_content),0,128);?></p>
 						</div>
@@ -82,7 +82,7 @@
 					<div class="fh5co-h-row-2 to-animate-2">
 						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($post[4]->ID)?>)"></div>
 						<div class="fh5co-v-col-2 fh5co-text arrow-left">
-							<h3><?=$post[4]->post_title?></h3>
+							<a href="<?=get_permalink($post[4]->ID)?>"><h3><?=$post[4]->post_title?></h3></a>
 							<span class="pricing"><?=get_field('price',$post[4]->ID)?></span>
 							<p><?=mb_substr(strip_tags($post[4]->post_content),0,128);?></p>
 						</div>
@@ -91,7 +91,7 @@
 				<div class="fh5co-v-half to-animate-2">
 					<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($post[5]->ID)?>)"></div>
 					<div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
-						<h3><?=$post[5]->post_title?></h3>
+						<a href="<?=get_permalink($post[5]->ID)?>"><h3><?=$post[5]->post_title?></h3></a>
 						<span class="pricing"><?=get_field('price',$post[5]->ID)?></span>
 						<p><?=mb_substr(strip_tags($post[5]->post_content),0,128);?></p>
 					</div>
@@ -179,7 +179,7 @@
 			foreach ($post as $value): ?>
 			<div class="fh5co-event to-animate-2">
 				<h3><?=$value->comment_author?></h3>
-				<span class="fh5co-event-meta"><?=$value->comment_content?></span>
+				<span class="fh5co-event-meta"><?=$value->comment_date?></span>
 				<p><?=$value->comment_content?></p>
 			</div>
 			<?php endforeach; ?>
