@@ -33,7 +33,16 @@
 			</li>
 		</ul>
 		<!--Кнока обратной связи:-->
-		<a href="#" class="feedback to-animate-2"></a>
+<!--		<a href="#" class="feedback to-animate-2"></a>-->
+		<div class="blink-cb-module-main-btns active search-blink-cb-module-btn" style="position: absolute; bottom: 120px">
+			<div class="blink-cb-module-btns-container">
+				<div class="blink-cb-module-main-btn-container animated" style="background: transparent">
+					<div class="blink-cb-open-popup blink-cb-module-main-btn">
+						<a href="#recall" class="feedback to-animate-2"></a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -70,6 +79,7 @@
 	var submitSMG = new BMModule();
 	submitSMG.submitForm(function(success) { $('.blink-mailer input[type=submit]').val('Отправить'); $('.success-mail-text').html(success); $('.blink-mailer').hide(500);  $('.success-mail-text').show(500);  }, function(error) {});
 </script>
+<script type="text/javascript" src="http://callback.blink.kz/client/script/GET/"></script>
 <?php wp_footer() ?>
 
 </body>
