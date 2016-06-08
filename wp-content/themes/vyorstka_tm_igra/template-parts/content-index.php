@@ -47,7 +47,7 @@
 				<div class="fh5co-v-half to-animate-2">
 					<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($post[0]->ID)?>)"></div>
 					<div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
-						<h3><?=$post[0]->post_title?></h3>
+						<a href="<?=get_permalink($post[0]->ID)?>"><h3><?=$post[0]->post_title?></h3></a>
 						<span class="pricing"><?=get_field('price',$post[0]->ID)?></span>
 						<p><?=mb_substr(strip_tags($post[0]->post_content),0,128);?></p>
 					</div>

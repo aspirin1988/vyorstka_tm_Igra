@@ -105,7 +105,9 @@
 	</div>
 </div>
 <!--КОНЕЦ описание и расписание-->
-
+<?php $gallery=pp_gallery_get();
+if ($gallery):
+?>
 <!--НАЧАЛО фотоогалерея-->
 <div id="gallery-on-courses">
 	<div class="container">
@@ -116,24 +118,13 @@
 		</div>
 
 		<div class="owl-carousel-on-courses">
-			<a href="images/igra/gallery-boy.jpg" data-imagelightbox="f">
-				<div style="background-image: url(images/igra/gallery-boy.jpg)"></div>
+			<?php
+			foreach ($gallery as $value):
+			?>
+			<a href="<?=$value->url?>" data-imagelightbox="f">
+				<div style="background-image: url(<?=$value->url?>)"></div>
 			</a>
-			<a href="images/igra/gallery-boy-and-girl.jpg" data-imagelightbox="f">
-				<div style="background-image: url(images/igra/gallery-boy-and-girl.jpg)"></div>
-			</a>
-			<a href="images/igra/gallery-boy-and-girl2.jpg" data-imagelightbox="f">
-				<div style="background-image: url(images/igra/gallery-boy-and-girl2.jpg)"></div>
-			</a>
-			<a href="images/igra/gallery-boy-and-girl3.jpg" data-imagelightbox="f">
-				<div style="background-image: url(images/igra/gallery-boy-and-girl3.jpg)"></div>
-			</a>
-			<a href="images/igra/gallery-boy-and-girl4.jpg" data-imagelightbox="f">
-				<div style="background-image: url(images/igra/gallery-boy-and-girl4.jpg)"></div>
-			</a>
-			<a href="images/igra/gallery-girl.jpg" data-imagelightbox="f">
-				<div style="background-image: url(images/igra/gallery-girl.jpg)"></div>
-			</a>
+			<?php endforeach; ?>
 		</div>
 
 	</div>
@@ -150,21 +141,15 @@
 		</div>
 
 		<div class="owl-video-carousel-on-courses">
+			<?php
+			foreach ($gallery as $value): if ($value->description):
+			?>
 			<div class="video-item">
 				<div class='embed-container'>
-					<iframe src='https://www.youtube.com/embed/n-AdoTkXwbc' frameborder='0' allowfullscreen></iframe>
+					<?=$value->description?>
 				</div>
 			</div>
-			<div class="video-item">
-				<div class='embed-container'>
-					<iframe src='https://www.youtube.com/embed/hb8hhy18V-o' frameborder='0' allowfullscreen></iframe>
-				</div>
-			</div>
-			<div class="video-item">
-				<div class='embed-container'>
-					<iframe src='https://www.youtube.com/embed/yIIO7gxOAiY' frameborder='0' allowfullscreen></iframe>
-				</div>
-			</div>
+			<?php endif; endforeach; ?>
 		</div>
 
 	</div>
@@ -172,35 +157,36 @@
 <!--КОНЕЦ видеогалерея-->
 
 <div class="container shadow">
-	<img src="images/igra/courses/shadow-big-horizontal.png" class="img-responsive">
+	<img src="<?php bloginfo('template_directory') ?>/public/images/igra/courses/shadow-big-horizontal.png" class="img-responsive">
 </div>
+<?php endif; ?>
 
 <!--НАЧАЛО запись на приём-->
 <div class="container subscribe">
 	<div class="coupon">
 		<div class="coupon-content">
-			<h2 class="text-center">Записаться на пробный приём</h2>
+			<h2 class="text-center"><?=get_field('enroll-title',4)?></h2>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+				<?=get_field('enroll-text',4)?>
 			</p>
-			<form action="">
+			<form action="" class="blink-mailer">
+				<input type="hidden" name="title" value="Запись на приём">
 				<div class="form-group">
 					<label for="name">Имя</label>
-					<input id="name" class="form-control" placeholder="Ваше имя" type="text">
+					<input id="name" class="form-control" name="Имя" placeholder="Ваше имя" type="text">
 				</div>
 				<div class="form-group">
 					<label for="email">Телефон</label>
-					<input id="email" class="form-control" placeholder="Номер телефона" type="tel">
+					<input id="email" class="form-control" name="Телефона" placeholder="Номер телефона" type="tel">
 				</div>
 				<div class="form-group">
 					<label for="courseType">Выбор курса</label>
-					<select class="form-control" id="courseType">
-						<option>Выбор курса</option>
-						<option>Актёрское мастерство</option>
-						<option>Танцы для детей</option>
-						<option>Вокал</option>
-						<option>Ментальная арифметика</option>
-						<option>Подготовка к школе</option>
+					<select class="form-control" name="Курс" id="courseType">
+						<?php $post=get_posts(array('category_name'=>'courses','order'=>'id', 'numberposts'=>-1 ));
+						foreach ($post as $value):
+						?>
+						<option value="<?=$value->post_title?>" ><?=$value->post_title?></option>
+						<?php endforeach; ?>
 					</select>
 				</div>
 				<button type="submit" class="btn btn-primary btn-outline">Записаться</button>

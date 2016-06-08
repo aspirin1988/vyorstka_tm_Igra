@@ -65,6 +65,11 @@
 <script src="<?php bloginfo('template_directory') ?>/public/js/imagelightbox.min.js"></script>
 <!-- Main JS -->
 <script src="<?php bloginfo('template_directory') ?>/public/js/main.js"></script>
+<script src="https://callback.blink.kz/resources/callback/js/mailer.js" ></script>
+<script>
+	var submitSMG = new BMModule();
+	submitSMG.submitForm(function(success) { $('.blink-mailer input[type=submit]').val('Отправить'); $('.success-mail-text').html(success); $('.blink-mailer').hide(500);  $('.success-mail-text').show(500);  }, function(error) {});
+</script>
 <?php wp_footer() ?>
 
 </body>
