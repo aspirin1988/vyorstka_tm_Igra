@@ -1622,16 +1622,21 @@ p {
 		.dates {
 			display: flex;
 			flex-flow: row wrap;
-			justify-content: space-around;
+			justify-content: center;
 			margin: 4% 0;
 		}
 		.date {
-			max-width: 90px;
+			max-width: 160px;
 			display: flex;
 			flex-flow: column wrap;
+			text-align: center;
 			p {
 				line-height: 1.2;
 				margin: 0;
+			}
+			img {
+				max-width: 90px;
+				margin: 0 auto;
 			}
 		}
 		p.subscription {

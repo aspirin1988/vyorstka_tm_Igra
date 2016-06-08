@@ -1270,15 +1270,19 @@ p {
     #summary-and-work-time .work-time .dates {
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-around;
+      justify-content: center;
       margin: 4% 0; }
     #summary-and-work-time .work-time .date {
-      max-width: 90px;
+      max-width: 160px;
       display: flex;
-      flex-flow: column wrap; }
+      flex-flow: column wrap;
+      text-align: center; }
       #summary-and-work-time .work-time .date p {
         line-height: 1.2;
         margin: 0; }
+      #summary-and-work-time .work-time .date img {
+        max-width: 90px;
+        margin: 0 auto; }
     #summary-and-work-time .work-time p.subscription {
       font-size: 24px; }
     #summary-and-work-time .work-time p.quote {
