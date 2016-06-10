@@ -27,7 +27,7 @@
 	<div class="fh5co-2col fh5co-text">
 		<h2 class="heading to-animate"><?=get_the_title(13)?></h2>
 		<?php $post=get_post(13); $first=$post->post_content[0]; $rest=substr($post->post_content,1,strlen($post->post_content)-1); ?>
-		<p class="to-animate"><span class="firstcharacter"><?=$first?></span><?=$rest?></p>
+		<p class="to-animate"><?=$post->post_content?></p>
 		<p class="to-animate signature">
 			<img src="<?=get_field('image',13)?>" alt="Роспись" class="img-responsive">
 		</p>
