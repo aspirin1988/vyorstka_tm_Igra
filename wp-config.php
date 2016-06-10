@@ -20,17 +20,17 @@
 
 // ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
-define('DB_NAME', 'vyorstka_tm_Igra');
+define('DB_NAME', 'igraykz_igray');
 
 /** Имя пользователя MySQL */
-define('DB_USER', 'vyorstka_tm_Igra');
+define('DB_USER', 'igray_igray');
 
 /** Пароль к базе данных MySQL */
-define('DB_PASSWORD', '123456');
+define('DB_PASSWORD', 'eBj21y0^');
 //igra_admin
 //Q(w2JpJzXLGD!crSjZ password
 /** Имя сервера MySQL */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'srv-db-plesk05.ps.kz:3306');
 
 /** Кодировка базы данных для создания таблиц. */
 define('DB_CHARSET', 'utf8');
