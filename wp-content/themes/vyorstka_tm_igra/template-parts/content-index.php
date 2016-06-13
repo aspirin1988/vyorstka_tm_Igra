@@ -132,6 +132,9 @@
 	</div>
 </div>
 
+<?php $gallery=pp_gallery_get(4);
+if($gallery):
+?>
 <div id="fh5co-gallery" data-section="gallery">
 	<div class="container">
 		<div class="row text-center fh5co-heading row-padded">
@@ -140,7 +143,6 @@
 			</div>
 		</div>
 		<div class="row">
-			<?php $gallery=pp_gallery_get(4) ?>
 			<div class="col-md-3 col-sm-6 to-animate-2">
 				<a href="<?=$gallery[0]->url?>" data-imagelightbox="f">
 					<img src="<?=$gallery[0]->url?>" class="img-responsive">
@@ -170,7 +172,11 @@
 		</div>
 	</div>
 </div>
+<?php endif; ?>
 
+<?php $post=get_comments(array('post_id'=>4,'status' => 'approve','numberposts'=>-1)); 
+if ($post):
+?>
 <div id="fh5co-reviews" data-section="reviews"  data-stellar-background-ratio="0.5">
 	<div class="container">
 		<div class="row text-center fh5co-heading">
@@ -179,7 +185,7 @@
 			</div>
 		</div>
 		<div class="owl-carousel-reviews">
-			<?php $post=get_comments(array('post_id'=>4,'status' => 'approve',));
+			<?php
 			foreach ($post as $value): ?>
 			<div class="fh5co-event to-animate-2">
 				<h3><?=$value->comment_author?></h3>
@@ -190,6 +196,7 @@
 		</div>
 	</div>
 </div>
+<?php endif; ?>
 
 <?php if (!is_user_logged_in()): ?>
 <div id="fh5co-send-feed">
