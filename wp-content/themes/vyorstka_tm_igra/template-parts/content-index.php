@@ -113,7 +113,8 @@
 			?>
 			<div class="col-md-4 to-animate">
 				<div class="fh5co-type">
-					<h3 class="with-icon icon-<?=$key+1?>">
+					
+					<h3 id="icon-<?=$key+1?>" class="with-icon icon-<?=$key+1?>" >
 					<?=$value->post_title?>
 
 					</h3>
