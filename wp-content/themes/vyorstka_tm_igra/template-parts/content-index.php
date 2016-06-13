@@ -1,3 +1,4 @@
+<?php $obj=get_queried_object(); ?>
 <div id="fh5co-home" class="js-fullheight" data-section="home">
 
 	<div class="flexslider">
@@ -12,8 +13,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="background" style="background-image: url(<?=get_the_post_thumbnail_url()?>);" data-stellar-background-ratio="0.5">
-			<img src="<?=get_field('audience')?>">
+		<div class="background" style="background-image: url('<?=get_the_post_thumbnail_url($obj->ID)?>');" data-stellar-background-ratio="0.5">
+			<img src="<?=get_field('audience',$obj->ID)?>">
 		</div>
 
 	</div>
@@ -113,7 +114,12 @@
 			?>
 			<div class="col-md-4 to-animate">
 				<div class="fh5co-type">
-					
+					<style>
+						h3#icon-<?=$key+1?>::before{
+							background: url(<?=get_the_post_thumbnail_url($value->ID)?>) !important;
+							background-size: cover !important;
+						}
+					</style>
 					<h3 id="icon-<?=$key+1?>" class="with-icon icon-<?=$key+1?>" >
 					<?=$value->post_title?>
 
