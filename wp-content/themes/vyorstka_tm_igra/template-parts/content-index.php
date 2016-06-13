@@ -114,9 +114,14 @@
 			<?php $post=get_posts(array('category_name'=>'advantages','order'=>'id', 'numberposts'=>3 ));
 			foreach ($post as $key => $value):
 			?>
+				<style>
+					h3#icon-<?=$key+1?>:before{
+						content: url(<?=get_the_post_thumbnail_url($value->ID)?>);
+					}
+				</style>
 			<div class="col-md-4 to-animate">
 				<div class="fh5co-type">
-					<h3 class="with-icon icon-<?=$key+1?>">
+					<h3 id="icon-<?=$key+1?>" class="with-icon icon-<?=$key+1?>" >
 					<?=$value->post_title?>
 
 					</h3>
@@ -224,9 +229,9 @@
 					'comment_field'=>'
 				<div class="col-sm-12 to-animate-2">
 					<div class="form-group ">
-						<label for="message">Message</label>
+						<label for="message">Ваш отзыв</label>
 						<textarea name="" id="message" cols="30" rows="5" class="form-control"
-									  placeholder="Message"></textarea>
+									  placeholder="Ваш отзыв"></textarea>
 					</div>',
 				),
 				'title_reply'=>'',
