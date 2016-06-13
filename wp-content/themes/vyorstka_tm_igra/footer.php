@@ -38,7 +38,7 @@
 			<div class="blink-cb-module-btns-container">
 				<div class="blink-cb-module-main-btn-container animated" style="background: transparent">
 					<div class="blink-cb-open-popup blink-cb-module-main-btn">
-						<a href="#recall" class="feedback to-animate-2"></a>
+						<a href="#recall" class="feedback"></a>
 					</div>
 				</div>
 			</div>

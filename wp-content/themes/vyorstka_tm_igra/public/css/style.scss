@@ -31,7 +31,7 @@ $input-border-focus:  $brand-primary !default;
 $form-group-margin-bottom:       30px !default;
 
 $font-primary: 'Playfair Display', serif;
-$font-secondary: 'Merriweather', serif;
+$font-secondary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-brand: 'sladkoeshka', Arial, sans-serif;
 
 // Mixin
@@ -283,7 +283,6 @@ p {
  * Flexslider
  */
 #fh5co-home {
-	background: $brand-white url(../images/loader.gif) no-repeat center center;
 
 	.flexslider {
 		border: none;
@@ -299,43 +298,48 @@ p {
 			margin-top: -212px;
 			text-align: center;
 
-
-			@media screen and (max-width: $screen-sm) {
-				// margin-top: -66px;
-			}
 			.img-to-animate {
 				margin-top: 7%;
 
 				img {
 					margin: auto 0;
 					max-width: 90%;
-				}
-			}
-
-		}
-		.slides {
-			li {
-				background-repeat: no-repeat;
-				background-size: cover;
-				position: relative;
-				overflow: hidden;
-
-				img {
-					position: absolute;
-					bottom: -80px;
-					@media (max-width: 959px) {
-						display: none;
+					@media screen and (max-width: $screen-sm) {
+						margin-top: 65px;
+						padding: 0 20%;
+					}
+					@media screen and (max-width: 480px) {
+						margin-top: 120px;
+						padding: 0 15% 0 15%;
 					}
 				}
 			}
 		}
-		.fh5co-overlay {
-			position: absolute;
-			z-index: 3;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
+		.background {
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
+			overflow: hidden;
+			height: 100vh;
+
+			@media (max-width: 767px) {
+				background-position: 50% 0 !important;
+				height: auto;
+				min-height: 400px;
+			}
+			@media (max-width: 480px) {
+				min-height: 280px;
+			}
+
+			img {
+				position: absolute;
+				bottom: -80px;
+				@media (max-width: 767px) {
+					max-width: 700px;
+					bottom: -30px;
+				}
+			}
+
 		}
 		.flex-control-nav,
 		.flex-direction-nav {
@@ -453,12 +457,8 @@ p {
 		}
 		p {
 
-			line-height: 2;
+			line-height: 1.2;
 			color: #333;
-			&.signature {
-				max-width: 150px;
-				float: right;
-			}
 			span.firstcharacter { float: left;
 				font-size: 75px;
 				line-height: 60px;
@@ -476,14 +476,51 @@ p {
 	.fh5co-bg {
 		background-repeat: no-repeat;
 		background-size: cover;
-		@media screen and (max-width: $screen-lg) {
+		background-position: 100% 20%;
+		position: relative;
+		/*@media screen and (max-width: $screen-lg) {
 			width: 100%;
-			min-height: 500px;
+			min-height: 600px;
+		}*/
+		img.about-photo {
+			display: none;
+			@media screen and (max-width: $screen-lg) {
+				display: block;
+			}
+		}
+		.signature {
+			position: absolute;
+			left: 40px;
+			bottom: 20px;
+			max-width: 200px;
+
+			@media screen and (max-width: 480px) {
+				max-width: 150px;
+				left: 20px;
+				bottom: 10px;
+			}
+		}
+
+		/*@media screen and (max-width: 1200px) {
+			width: 100%;
+			min-height: 800px;
 		}
 		@media screen and (max-width: $screen-sm) {
 			width: 100%;
-			min-height: 300px;
+			min-height: 650px;
 		}
+		@media screen and (max-width: 520px) {
+			width: 100%;
+			min-height: 500px;
+		}
+		@media screen and (max-width: 480px) {
+			width: 100%;
+			min-height: 450px;
+		}
+		@media screen and (max-width: 320px) {
+			width: 100%;
+			min-height: 350px;
+		}*/
 	}
 }
 
@@ -1200,6 +1237,10 @@ p {
 				display: none;
 			}
 		}
+		.blink-cb-module-main-btns {
+			right: 50px !important;
+			bottom: 90px !important;
+		}
 		.feedback {
 			background: 50% 50%/100% 100% url(../images/igra/footer-feedback.png);
 			display: block;
@@ -1208,7 +1249,7 @@ p {
 			position: relative;
 			right: 0;
 			bottom: 21px;
-			
+
 			@media (max-width: 767px) {
 				position: static;
 				margin: 0 auto;

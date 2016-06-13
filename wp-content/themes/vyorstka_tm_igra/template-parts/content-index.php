@@ -12,25 +12,22 @@
 				</div>
 			</div>
 		</div>
-		<ul class="slides">
-			<li style="background-image: url(<?=get_the_post_thumbnail_url()?>);" data-stellar-background-ratio="0.5">
-				<img src="<?=get_field('audience')?>">
-			</li>
-		</ul>
+		<div class="background" style="background-image: url(<?=get_the_post_thumbnail_url()?>);" data-stellar-background-ratio="0.5">
+			<img src="<?=get_field('audience')?>">
+		</div>
 
 	</div>
 
 </div>
 
 <div id="fh5co-about" data-section="about">
-	<div class="fh5co-2col fh5co-bg to-animate-2" style="background-image: url(<?=get_the_post_thumbnail_url(13)?>)"></div>
+	<div class="fh5co-2col fh5co-bg to-animate-2" style="background-image: url(<?=get_the_post_thumbnail_url(13)?>)">
+		<img src="<?=get_the_post_thumbnail_url(13)?>" class="img-responsive about-photo">
+	</div>
 	<div class="fh5co-2col fh5co-text">
 		<h2 class="heading to-animate"><?=get_the_title(13)?></h2>
 		<?php $post=get_post(13); $first=$post->post_content[0]; $rest=substr($post->post_content,1,strlen($post->post_content)-1); ?>
 		<p class="to-animate"><?=$post->post_content?></p>
-		<p class="to-animate signature">
-			<img src="<?=get_field('image',13)?>" alt="Роспись" class="img-responsive">
-		</p>
 	</div>
 </div>
 
@@ -114,16 +111,9 @@
 			<?php $post=get_posts(array('category_name'=>'advantages','order'=>'id', 'numberposts'=>3 ));
 			foreach ($post as $key => $value):
 			?>
-
 			<div class="col-md-4 to-animate">
 				<div class="fh5co-type">
-					<style>
-						h3#icon-<?=$key+1?>:before{
-							background: url(<?=get_the_post_thumbnail_url($value->ID)?>) !important;
-							background-size: cover !important;
-						}
-					</style>
-					<h3 id="icon-<?=$key+1?>" class="with-icon icon-<?=$key+1?>" >
+					<h3 class="with-icon icon-<?=$key+1?>">
 					<?=$value->post_title?>
 
 					</h3>
@@ -214,27 +204,27 @@
 									<input id="author" name="author" type="text" placeholder="Имя фамилия" required>	
 								</div>
 							</div>',
-					'email'=>'
-					<div class="col-md-4 to-animate-2">
-						<div class="form-group">
-							<label for="url">Телефон</label><br>
-							<input id="url" name="url" type="text" placeholder="Телефон" required> 
-						</div>
-					</div>',
-					'url'=>'
-					<div class="col-md-4 to-animate-2">
-						<div class="form-group">
-							<label for="email">Email</label><br>
-							<input id="email" name="email" type="email" placeholder="Email" required>
-						</div>
-					</div>',
-					'comment_field'=>'
-				<div class="col-sm-12 to-animate-2">
-					<div class="form-group ">
-						<label for="message">Ваш отзыв</label>
-						<textarea name="" id="message" cols="30" rows="5" class="form-control"
-									  placeholder="Ваш отзыв"></textarea>
-					</div>',
+							'email'=>'
+							<div class="col-md-4 to-animate-2">
+								<div class="form-group">
+									<label for="url">Телефон</label><br>
+									<input id="url" class="form-control" name="url" type="text" placeholder="Телефон" required> 
+								</div>
+							</div>',
+							'url'=>'
+							<div class="col-md-4 to-animate-2">
+								<div class="form-group">
+									<label for="email">Email</label><br>
+									<input id="email" class="form-control" name="email" type="email" placeholder="Email" required>
+								</div>
+							</div>',
+							'comment_field'=>'
+							<div class="col-sm-12 to-animate-2">
+								<div class="form-group ">
+									<label for="message">Message</label>
+									<textarea name="" id="message" cols="30" rows="5" class="form-control"
+												  placeholder="Message"></textarea>
+								</div>',
 				),
 				'title_reply'=>'',
 				'title_reply_before'=>'',

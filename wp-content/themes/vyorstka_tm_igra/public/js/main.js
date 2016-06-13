@@ -16,31 +16,6 @@
 	    );
 	};
 
-	var fullHeight = function() {
-		if ( !isiPad() && !isiPhone() ) {
-			$('.js-fullheight').css('height', $(window).height());
-			$(window).resize(function(){
-				$('.js-fullheight').css('height', $(window).height());
-			})
-		}
-		
-
-	};
-
-	var sliderMain = function() {
-		
-	  	$('#fh5co-home .flexslider').flexslider({
-			animation: "fade",
-			slideshowSpeed: 5000
-	  	});
-
-	  	$('#fh5co-home .flexslider .slides > li').css('height', $(window).height());	
-	  	$(window).resize(function(){
-	  		$('#fh5co-home .flexslider .slides > li').css('height', $(window).height());	
-	  	});
-
-	};
-
 	var sliderSayings = function() {
 		$('#fh5co-sayings .flexslider').flexslider({
 			animation: "slide",
@@ -581,8 +556,6 @@
 	// Document on load.
 	$(function(){
 
-		fullHeight();
-		sliderMain();
 		sliderSayings();
 		offcanvasMenu();
 		mainMenuSticky();
