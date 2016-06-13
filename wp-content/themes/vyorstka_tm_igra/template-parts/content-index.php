@@ -117,12 +117,7 @@
 
 			<div class="col-md-4 to-animate">
 				<div class="fh5co-type">
-					<style>
-						h3#icon-<?=$key+1?>:before{
-							background: url(<?=get_the_post_thumbnail_url($value->ID)?>) !important;
-							background-size: cover !important;
-						}
-					</style>
+					
 					<h3 id="icon-<?=$key+1?>" class="with-icon icon-<?=$key+1?>" >
 					<?=$value->post_title?>
 
