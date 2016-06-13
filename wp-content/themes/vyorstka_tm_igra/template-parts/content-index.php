@@ -202,7 +202,7 @@
 							<div class="col-md-4 to-animate-2">
 								<div class="form-group">
 									<label for="author">Имя</label><br>
-									<input id="author" name="author" type="text" placeholder="Имя фамилия" required>	
+									<input id="author" class="form-control" name="author" type="text" placeholder="Имя фамилия" required>	
 								</div>
 							</div>',
 							'email'=>'
