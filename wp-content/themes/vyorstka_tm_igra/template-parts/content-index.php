@@ -148,14 +148,17 @@ if($gallery):
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<?php foreach($gallery as $galleryItem) : ?>
-					<a href="<?=$galleryItem->url?>">
-						<img alt="Iphone Back"
-							 src="<?=$galleryItem->url?>"
-							 data-image="<?=$galleryItem->url?>"
-							 style="display:none">
-					</a>
-				<?php endforeach; ?>
+				<div id="gallery-pp-oo" class="">
+					<?php foreach($gallery as $galleryItem) : ?>
+						<a href="<?=$galleryItem->url?>">
+							<img alt="Iphone Back"
+								 src="<?=$galleryItem->url?>"
+								 data-image="<?=$galleryItem->url?>"
+								 style="display:none">
+						</a>
+					<?php endforeach; ?>
+				</div>
+				<div style="margin-top: 40px;"></div>
 			</div>
 		</div>
 	</div>
