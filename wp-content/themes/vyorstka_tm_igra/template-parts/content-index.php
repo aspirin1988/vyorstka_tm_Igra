@@ -21,14 +21,16 @@
 
 </div>
 
-<div id="fh5co-about" data-section="about">
-	<div class="fh5co-2col fh5co-bg to-animate-2" style="background-image: url(<?=get_the_post_thumbnail_url(13)?>)">
-		<img src="<?=get_the_post_thumbnail_url(13)?>" class="img-responsive about-photo">
-	</div>
-	<div class="fh5co-2col fh5co-text">
-		<h2 class="heading to-animate"><?=get_the_title(13)?></h2>
-		<?php $post=get_post(13); $first=$post->post_content[0]; $rest=substr($post->post_content,1,strlen($post->post_content)-1); ?>
-		<p class="to-animate"><?=$post->post_content?></p>
+<div class="about-wrapper">
+	<div id="fh5co-about" data-section="about">
+		<div class="fh5co-2col fh5co-bg to-animate-2" style="background-image: url(<?=get_the_post_thumbnail_url(13)?>)">
+			<img src="<?=get_the_post_thumbnail_url(13)?>" class="img-responsive about-photo">
+		</div>
+		<div class="fh5co-2col fh5co-text">
+			<h2 class="heading to-animate"><?=get_the_title(13)?></h2>
+			<?php $post=get_post(13); $first=$post->post_content[0]; $rest=substr($post->post_content,1,strlen($post->post_content)-1); ?>
+			<p class="to-animate"><?=$post->post_content?></p>
+		</div>
 	</div>
 </div>
 
@@ -143,31 +145,15 @@ if($gallery):
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-3 col-sm-6 to-animate-2">
-				<a href="<?=$gallery[0]->url?>" data-imagelightbox="f">
-					<img src="<?=$gallery[0]->url?>" class="img-responsive">
-				</a>
-			</div>
-			<div class="col-md-3 col-sm-6 to-animate">
-				<a href="<?=$gallery[1]->url?>" data-imagelightbox="f">
-					<img src="<?=$gallery[1]->url?>" alt="" class="img-responsive">
-				</a>
-				<a href="<?=$gallery[2]->url?>" data-imagelightbox="f">
-					<img src="<?=$gallery[2]->url?>" class="img-responsive">
-				</a>
-			</div>
-			<div class="col-md-3 col-sm-6 to-animate-2">
-				<a href="<?=$gallery[3]->url?>" data-imagelightbox="f">
-					<img src="<?=$gallery[3]->url?>" alt="" class="img-responsive">
-				</a>
-				<a href="<?=$gallery[4]->url?>" data-imagelightbox="f">
-					<img src="<?=$gallery[4]->url?>" class="img-responsive">
-				</a>
-			</div>
-			<div class="col-md-3 col-sm-6 to-animate">
-				<a href="<?=$gallery[5]->url?>" data-imagelightbox="f">
-					<img src="<?=$gallery[5]->url?>" class="img-responsive">
-				</a>
+			<div class="col-md-12">
+				<?php foreach($gallery as $galleryItem) : ?>
+					<a href="<?=$galleryItem->url?>">
+						<img alt="Iphone Back"
+							 src="<?=$galleryItem->url?>"
+							 data-image="<?=$galleryItem->url?>"
+							 style="display:none">
+					</a>
+				<?php endforeach; ?>
 			</div>
 		</div>
 	</div>
@@ -183,16 +169,14 @@ if($gallery):
 				<h2 class="heading to-animate-2">Отзывы</h2>
 			</div>
 		</div>
-		<div class="owl-carousel-reviews">
-			<?php
-			foreach ($post as $value): ?>
-			<div class="fh5co-event to-animate-2">
-				<h3><?=$value->comment_author?></h3>
-				<span class="fh5co-event-meta"><?=$value->comment_date?></span>
-				<p><?=$value->comment_content?></p>
-			</div>
-			<?php endforeach; ?>
+		<?php
+		foreach ($post as $value): ?>
+		<div class="fh5co-event to-animate-2">
+			<h3><?=$value->comment_author?></h3>
+			<span class="fh5co-event-meta"><?=$value->comment_date?></span>
+			<p><?=$value->comment_content?></p>
 		</div>
+		<?php endforeach; ?>
 	</div>
 </div>
 

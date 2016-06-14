@@ -112,7 +112,7 @@ body {
 	font-family: $font-secondary;
 	font-size: 18px;
 	font-weight: 300;
-	line-height: 2;
+	line-height: 1.2;
 	color: #5e493a;
 	&.fh5co-overflow {
 		overflow-x: auto;	
@@ -414,13 +414,16 @@ p {
 	}
 }
 
-
+.about-wrapper {
+	background: #130d08 url(../images/igra/background-pattern.jpg) repeat;
+}
 
 #fh5co-about {
 	@include flex;
 	@include flexwrap;
-	background: lighten($brand-black, 90%);
 	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
 	.fh5co-2col {
 		width: 50%;
 		@media screen and (max-width: $screen-lg) {
@@ -430,7 +433,6 @@ p {
 	.fh5co-text {
 		padding: 2em 6em;
 		text-align: left;
-		background: #130d08 url(../images/igra/background-pattern.jpg) repeat;
 		@media screen and (max-width: $screen-lg) {
 			padding: 1em;
 		}
@@ -1650,7 +1652,7 @@ p {
 		}
 		p {
 			font-size: 16px;
-			line-height: 1.5;
+			line-height: 1.2;
 			font-family: $font-family-base;
 			text-align: justify;
 		}

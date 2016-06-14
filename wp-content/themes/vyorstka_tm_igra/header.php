@@ -44,6 +44,8 @@
 
 	<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/public/css/style.css">
 
+	<link rel='stylesheet' href='<?php bloginfo('template_directory') ?>/public/css/unite-gallery.css' type='text/css' />
+
 
 	<!-- Modernizr JS -->
 	<script src="<?php bloginfo('template_directory') ?>/public/js/modernizr-2.6.2.min.js"></script>
