@@ -107,7 +107,7 @@
 	<div class="container">
 		<div class="row text-center fh5co-heading row-padded">
 			<div class="col-md-8 col-md-offset-2">
-				<h2 class="heading to-animate"><?=get_field('advantages',4)?></h2>
+				<h2 class="heading to-animate"><?=get_field('osob',4)?></h2>
 			</div>
 		</div>
 		<div class="row">
@@ -141,7 +141,7 @@ if($gallery):
 	<div class="container">
 		<div class="row text-center fh5co-heading row-padded">
 			<div class="col-md-8 col-md-offset-2">
-				<h2 class="heading to-animate">Фотогалерея</h2>
+				<h2 class="heading to-animate"><?=get_field('gallery',4)?></h2>
 			</div>
 		</div>
 		<div class="row">
@@ -166,7 +166,7 @@ if($gallery):
 	<div class="container">
 		<div class="row text-center fh5co-heading">
 			<div class="col-md-8 col-md-offset-2 to-animate">
-				<h2 class="heading to-animate-2">Отзывы</h2>
+				<h2 class="heading to-animate-2"><?=get_field('rew',4)?></h2>
 			</div>
 		</div>
 		<?php
@@ -274,7 +274,7 @@ if($gallery):
 	<div class="container">
 		<div class="row text-center fh5co-heading">
 			<div class="col-md-8 col-md-offset-2 to-animate">
-				<h2 class="heading to-animate-2">Новости</h2>
+				<h2 class="heading to-animate-2"><?=get_field('news',4)?></h2>
 			</div>
 		</div>
 		<div class="owl-carousel-news">
