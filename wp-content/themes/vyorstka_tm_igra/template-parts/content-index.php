@@ -21,14 +21,16 @@
 
 </div>
 
-<div id="fh5co-about" data-section="about">
-	<div class="fh5co-2col fh5co-bg to-animate-2" style="background-image: url(<?=get_the_post_thumbnail_url(13)?>)">
-		<img src="<?=get_the_post_thumbnail_url(13)?>" class="img-responsive about-photo">
-	</div>
-	<div class="fh5co-2col fh5co-text">
-		<h2 class="heading to-animate"><?=get_the_title(13)?></h2>
-		<?php $post=get_post(13); $first=$post->post_content[0]; $rest=substr($post->post_content,1,strlen($post->post_content)-1); ?>
-		<p class="to-animate"><?=$post->post_content?></p>
+<div class="about-wrapper">
+	<div id="fh5co-about" data-section="about">
+		<div class="fh5co-2col fh5co-bg to-animate-2" style="background-image: url(<?=get_the_post_thumbnail_url(13)?>)">
+			<img src="<?=get_the_post_thumbnail_url(13)?>" class="img-responsive about-photo">
+		</div>
+		<div class="fh5co-2col fh5co-text">
+			<h2 class="heading to-animate"><?=get_the_title(13)?></h2>
+			<?php $post=get_post(13); $first=$post->post_content[0]; $rest=substr($post->post_content,1,strlen($post->post_content)-1); ?>
+			<p class="to-animate"><?=$post->post_content?></p>
+		</div>
 	</div>
 </div>
 

@@ -15,7 +15,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-weight: 300;
-  line-height: 2;
+  line-height: 1.2;
   color: #5e493a; }
   body.fh5co-overflow {
     overflow-x: auto; }
@@ -267,6 +267,9 @@ p {
     .fh5co-heading .sub-heading {
       font-size: 18px; } }
 
+.about-wrapper {
+  background: #130d08 url(../images/igra/background-pattern.jpg) repeat; }
+
 #fh5co-about {
   display: -webkit-box;
   display: -moz-box;
@@ -276,8 +279,9 @@ p {
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
-  background: #e6e6e6;
-  width: 100%; }
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto; }
   #fh5co-about .fh5co-2col {
     width: 50%; }
     @media screen and (max-width: 1200px) {
@@ -285,8 +289,7 @@ p {
         width: 100%; } }
   #fh5co-about .fh5co-text {
     padding: 2em 6em;
-    text-align: left;
-    background: #130d08 url(../images/igra/background-pattern.jpg) repeat; }
+    text-align: left; }
     @media screen and (max-width: 1200px) {
       #fh5co-about .fh5co-text {
         padding: 1em; } }
@@ -1304,7 +1307,7 @@ p {
       color: white; }
     #summary-and-work-time .summary p {
       font-size: 16px;
-      line-height: 1.5;
+      line-height: 1.2;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       text-align: justify; }
   #summary-and-work-time .work-time {
