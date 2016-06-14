@@ -321,6 +321,9 @@ p {
 			position: relative;
 			overflow: hidden;
 			height: 100vh;
+			@media (min-width: 1200px) {
+				text-align: center;
+			}
 
 			@media (max-width: 767px) {
 				background-position: 50% 0 !important;
@@ -334,7 +337,11 @@ p {
 			img {
 				position: absolute;
 				bottom: -80px;
+				@media (min-width: 1200px) {
+					margin-left: -1011px;
+				}
 				@media (max-width: 767px) {
+					margin-left: 0;
 					max-width: 700px;
 					bottom: -30px;
 				}
@@ -414,10 +421,11 @@ p {
 	}
 }
 
+
+
 .about-wrapper {
 	background: #130d08 url(../images/igra/background-pattern.jpg) repeat;
 }
-
 #fh5co-about {
 	@include flex;
 	@include flexwrap;

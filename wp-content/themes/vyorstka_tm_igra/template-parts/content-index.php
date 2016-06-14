@@ -21,6 +21,8 @@
 
 </div>
 
+<br> <br>
+
 <div class="about-wrapper">
 	<div id="fh5co-about" data-section="about">
 		<div class="fh5co-2col fh5co-bg to-animate-2" style="background-image: url(<?=get_the_post_thumbnail_url(13)?>)">
