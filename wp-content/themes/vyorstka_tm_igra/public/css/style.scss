@@ -421,7 +421,17 @@ p {
 	}
 }
 
-
+.shadow-container {
+	padding: 15px 0;
+	@media (max-width: 767px) {
+		padding: 10px 0;
+	}
+	img {
+		max-width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+}
 
 .about-wrapper {
 	background: #130d08 url(../images/igra/background-pattern.jpg) repeat;
@@ -660,17 +670,7 @@ p {
 				
 				border-right:15px solid $courses-background-color;
 				@media screen and (max-width: $screen-sm) {
-					right: auto!important;
-					left: 15px!important;
-					top: 0!important;
-					margin-top: -15px!important;
-
-					margin-left: 0px!important;
-					border-top: none!important;	
-
-					border-left:15px solid transparent!important; 
-					border-right:15px solid transparent!important; 
-					border-bottom: 15px solid #f5f5f5!important;
+					display: none;
 				}
 			}
 		}
@@ -690,26 +690,8 @@ p {
 				border-bottom: 15px solid transparent; 
 				
 				border-left:15px solid $courses-background-color;
-
-				@media screen and (max-width: $screen-md) {
-					right: auto!important;
-					left: 0!important;
-					margin-left: -15px!important;
-					border-left: none!important;
-					border-right:15px solid #f5f5f5!important; 	
-				}
 				@media screen and (max-width: $screen-sm) {
-					right: auto!important;
-					left: 15px!important;
-					top: 0!important;
-					margin-top: -15px!important;
-
-					margin-left: 0px!important;
-					border-top: none!important;	
-
-					border-left:15px solid transparent!important; 
-					border-right:15px solid transparent!important; 
-					border-bottom: 15px solid #f5f5f5!important;
+					display: none;
 				}
 
 				
@@ -745,13 +727,34 @@ p {
 					background-repeat: no-repeat;
 					background-position: center center;
 					@media screen and (max-width: $screen-sm) {
-						height: 200px;
+						min-height: 350px;
 					}
 				}
 				@media screen and (max-width: $screen-sm) {
 					width: 100%;
 				}
 				
+			}
+			> .fh5co-v-col-4 {
+				width: 400%;
+				padding: 20px;
+				position: relative;
+				&.fh5co-bg-img {
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: top center;
+					@media screen and (max-width: $screen-sm) {
+						width: 100%;
+						min-height: 350px;
+					}
+				}
+				@media screen and (min-width: $screen-sm) {
+					min-height: 450px;
+				}
+				@media screen and (max-width: $screen-sm) {
+					width: 100%;
+				}
+
 			}
 			> .fh5co-h-row-2 {
 				width: 100%;
@@ -770,7 +773,7 @@ p {
 						background-repeat: no-repeat;
 						background-position: center center;
 						@media screen and (max-width: $screen-sm) {
-							height: 200px;
+							min-height: 350px;
 						}
 					}
 				}

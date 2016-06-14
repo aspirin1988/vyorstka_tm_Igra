@@ -21,7 +21,10 @@
 
 </div>
 
-<br> <br>
+
+<div class="shadow-container">
+	<img src="<?php bloginfo("template_directory") ?>/public/images/igra/shadow.png" alt="Тень">
+</div>
 
 <div class="about-wrapper">
 	<div id="fh5co-about" data-section="about">
@@ -98,6 +101,71 @@
 						<p><?=mb_substr(strip_tags($post[5]->post_content),0,128);?></p>
 					</div>
 				</div>
+
+				<br> <br> <br>
+
+				<!--НАЧАЛО большое окно-->
+				<div class="fh5co-v-half to-animate-2">
+					<div class="fh5co-v-col-4 fh5co-bg-img" style="background-image: url(<?php bloginfo("template_directory") ?>/public/images/igra/courses-guy.jpg)"></div>
+				</div>
+				<div class="fh5co-v-half to-animate-2">
+					<div class="fh5co-v-col-4 fh5co-text fh5co-special-1 arrow-left">
+						<h3>Актёрское мастерство</h3>
+						<span class="pricing">20 000 тг в мес</span>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+					</div>
+				</div>
+				<!--КОНЕЦ большое окно-->
+
+				<!--НАЧАЛО маленькие окна-->
+				<div class="fh5co-v-half">
+					<div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
+						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?php bloginfo("template_directory") ?>/public/images/igra/courses-kids-laughting.jpg)"></div>
+						<div class="fh5co-v-col-2 fh5co-text arrow-right">
+							<h3>Вокал</h3>
+							<span class="pricing">индивидуальные занятия</span>
+							<p>Far far away, behind the word mountains.</p>
+						</div>
+					</div>
+				</div>
+				<!--КОНЕЦ маленькие окна-->
+				<!--НАЧАЛО маленькие окна-->
+				<div class="fh5co-v-half to-animate-2">
+					<div class="fh5co-h-row-2 to-animate-2">
+						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?php bloginfo("template_directory") ?>/public/images/igra/courses-two-girls.jpg)"></div>
+						<div class="fh5co-v-col-2 fh5co-text arrow-left">
+							<h3>Ментальная арифметика</h3>
+							<span class="pricing">12 000 тг в мес</span>
+							<p>Far far away, behind the word mountains.</p>
+						</div>
+					</div>
+				</div>
+				<!--КОНЕЦ маленькие окна-->
+
+				<!--НАЧАЛО маленькие окна-->
+				<div class="fh5co-v-half">
+					<div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
+						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?php bloginfo("template_directory") ?>/public/images/igra/courses-kids-laughting.jpg)"></div>
+						<div class="fh5co-v-col-2 fh5co-text arrow-right">
+							<h3>Вокал</h3>
+							<span class="pricing">индивидуальные занятия</span>
+							<p>Far far away, behind the word mountains.</p>
+						</div>
+					</div>
+				</div>
+				<!--КОНЕЦ маленькие окна-->
+				<!--НАЧАЛО маленькие окна-->
+				<div class="fh5co-v-half">
+					<div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
+						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?php bloginfo("template_directory") ?>/public/images/igra/courses-kids-laughting.jpg)"></div>
+						<div class="fh5co-v-col-2 fh5co-text arrow-right">
+							<h3>Вокал</h3>
+							<span class="pricing">индивидуальные занятия</span>
+							<p>Far far away, behind the word mountains.</p>
+						</div>
+					</div>
+				</div>
+				<!--КОНЕЦ маленькие окна-->
 			</div>
 		</div>
 
