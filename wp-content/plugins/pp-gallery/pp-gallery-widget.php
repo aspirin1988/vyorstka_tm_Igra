@@ -5,31 +5,21 @@
 <link rel="stylesheet" href="/wp-content/plugins/pp-gallery/bower_components/uikit/css/components/upload.min.css">
 <link rel="stylesheet" href="/wp-content/plugins/pp-gallery/bower_components/uikit/css/components/progress.min.css">
 <link rel="stylesheet" href="/wp-content/plugins/pp-gallery/bower_components/uikit/css/components/notify.min.css">
+<link rel="stylesheet" href="/wp-content/plugins/pp-gallery/bower_components/uikit/css/components/slidenav.min.css">
 <link rel="stylesheet" href="/wp-content/plugins/pp-gallery/pp-gallery.css">
 
 <div class="pp-widget-container">
     <div class="pp-widget-images">
-       <!-- <ul class="uk-grid uk-grid-small uk-grid-width-1-2 uk-grid-width-medium-1-5 uk-grid-width-large-1-5" data-uk-margin>
-            <?php /*foreach($pp_gallery_current_images as $key => $val): */?>
-                <li class="pp-widget-image">
-                    <div class="uk-thumbnail">
-                        <img src="<?/*=$val->url; */?>" alt="">
-                        <div class="uk-thumbnail-caption">
-                            <i class="uk-icon-remove remove-pp-img"  data-pp-id="<?/*=$val->id; */?>"></i>
-                            <i class="uk-icon-cog" data-uk-modal="{target:'#my-id'}" ></i>
-                        </div>
-                    </div>
-                </li>
-            <?php /*endforeach; */?>
-        </ul>-->
         <?php if (count($pp_gallery_current_images)):?>
         <table class="uk-table uk-table-striped">
+            <caption><i title="Удалить все изображения для данной записи" class="uk-icon-remove remove-all-pp-img"  data-pp-id="<?=get_the_ID(); ?>"></i></caption>
             <thead>
             <tr>
                 <th style="width: 20%">Thumbnail</th>
                 <th>Name</th>
                 <th>Alt</th>
                 <th style="width: 40%">Description</th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -37,11 +27,9 @@
             <tr data-row="<?=$val->id?>" >
                 <td style="width: 20%">
                     <div class="uk-thumbnail">
-                        <img src="<?=$val->url; ?>" alt="">
-                        <div class="uk-thumbnail-caption">
-                            <i class="uk-icon-remove remove-pp-img"  data-pp-id="<?=$val->id; ?>"></i>
-                            <i class="uk-icon-cog edit-pp-img" data-pp-id="<?=$val->id; ?>" ></i>
-                        </div>
+                        <a  href="<?=$val->url; ?>" data-uk-lightbox="{group:'my-group'}"  title="<?=$val->name?>">
+                            <img src="<?=$val->url; ?>" alt="">
+                        </a>
                     </div>
                 </td>
                 <td>
@@ -52,6 +40,12 @@
                 </td>
                 <td style="width: 40%">
                     <textarea name="description<?=$val->id; ?>" id="description<?=$val->id; ?>" ><?=$val->description?></textarea>
+                </td>
+                <td>
+                    <div class="uk-thumbnail-caption">
+                        <i class="uk-icon-remove remove-pp-img"  title="Удалить данное изображение" data-pp-id="<?=$val->id; ?>"></i>
+                        <i class="uk-icon-save edit-pp-img"      title="Сохранить изменения"        data-pp-id="<?=$val->id; ?>" ></i>
+                    </div>
                 </td>
             </tr>
             <?php endforeach; ?>
