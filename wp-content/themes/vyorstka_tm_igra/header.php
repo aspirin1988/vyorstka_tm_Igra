@@ -44,6 +44,8 @@
 
 	<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/public/css/style.css">
 
+	<link rel='stylesheet' href='<?php bloginfo('template_directory') ?>/public/css/unite-gallery.css' type='text/css' />
+
 
 	<!-- Modernizr JS -->
 	<script src="<?php bloginfo('template_directory') ?>/public/js/modernizr-2.6.2.min.js"></script>
@@ -62,14 +64,14 @@
 		<div class="fh5co-main-nav">
 			<div class="container-fluid">
 				<div class="fh5co-menu">
-					<a href="#" data-nav-section="home" class="animated slideInLeft">Главная</a>
-					<a href="#" data-nav-section="about" class="animated slideInUp">О мастерской</a>
-					<a href="#" data-nav-section="courses" class="animated slideInDown">Курсы</a>
-					<a href="#" data-nav-section="advantages" class="animated slideInUp">Наша уникальность</a>
-					<a href="#" data-nav-section="gallery" class="animated slideInDown">Фотогалерея</a>
-					<a href="#" data-nav-section="reviews" class="animated slideInUp">Отзывы</a>
-					<a href="#" data-nav-section="news" class="animated slideInDown">Новости</a>
-					<a href="#" data-nav-section="contacts" class="animated slideInRight">Контакты</a>
+					<a href="#" data-nav-section="home" class="animated slideInLeft"><?=get_field('main',4)?></a>
+					<a href="#" data-nav-section="about" class="animated slideInUp"><?=get_field('about',4)?></a>
+					<a href="#" data-nav-section="courses" class="animated slideInDown"><?=get_field('cources',4)?></a>
+					<a href="#" data-nav-section="advantages" class="animated slideInUp"><?=get_field('Наша уникальность',4)?></a>
+					<a href="#" data-nav-section="gallery" class="animated slideInDown"><?=get_field('gallery',4)?></a>
+					<a href="#" data-nav-section="reviews" class="animated slideInUp"><?=get_field('rew',4)?></a>
+					<a href="#" data-nav-section="news" class="animated slideInDown"><?=get_field('news',4)?></a>
+					<a href="#" data-nav-section="contacts" class="animated slideInRight"><?=get_field('contacts',4)?></a>
 				</div>
 			</div>
 
@@ -80,14 +82,14 @@
 	<div class="fh5co-main-nav non-index">
 		<div class="container-fluid">
 			<div class="fh5co-menu">
-				<a href="<?=get_permalink(4)?>">Главная</a>
-				<a href="<?=get_permalink(4)?>#fh5co-about">О мастерской</a>
-				<a href="<?=get_permalink(4)?>#fh5co-courses">Курсы</a>
-				<a href="<?=get_permalink(4)?>#fh5co-advantages">Наша уникальность</a>
-				<a href="<?=get_permalink(4)?>#fh5co-gallery">Фотогалерея</a>
-				<a href="<?=get_permalink(4)?>#fh5co-reviews">Отзывы</a>
-				<a href="<?=get_permalink(4)?>#fh5co-news">Новости</a>
-				<a href="<?=get_permalink(4)?>#fh5co-footer">Контакты</a>
+				<a href="<?=get_permalink(4)?>"><?=get_field('main',4)?></a>
+				<a href="<?=get_permalink(4)?>#fh5co-about"><?=get_field('about',4)?></a>
+				<a href="<?=get_permalink(4)?>#fh5co-courses"><?=get_field('cources',4)?></a>
+				<a href="<?=get_permalink(4)?>#fh5co-advantages"><?=get_field('osob',4)?></a>
+				<a href="<?=get_permalink(4)?>#fh5co-gallery"><?=get_field('gallery',4)?></a>
+				<a href="<?=get_permalink(4)?>#fh5co-reviews"><?=get_field('rew',4)?></a>
+				<a href="<?=get_permalink(4)?>#fh5co-news"><?=get_field('news',4)?></a>
+				<a href="<?=get_permalink(4)?>#fh5co-footer"><?=get_field('contacts',4)?></a>
 			</div>
 		</div>
 

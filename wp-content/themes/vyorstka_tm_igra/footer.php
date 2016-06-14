@@ -80,6 +80,20 @@
 	submitSMG.submitForm(function(success) { $('.blink-mailer input[type=submit]').val('Отправить'); $('.success-mail-text').html(success); $('.blink-mailer').hide(500);  $('.success-mail-text').show(500);  }, function(error) {});
 </script>
 <script type="text/javascript" src="http://callback.blink.kz/client/script/GET/"></script>
+<script type='text/javascript' src=<?php bloginfo('template_directory') ?>/public/js/unitegallery.min.js'></script>
+
+<script type='text/javascript' src='<?php bloginfo('template_directory') ?>/public/js/ug-theme-tiles.js'></script>
+<script type="text/javascript">
+
+	jQuery(document).ready(function(){
+
+		jQuery("#gallery").unitegallery({
+			tiles_type:"justified"
+		});
+
+	});
+
+</script>
 <?php wp_footer() ?>
 
 </body>

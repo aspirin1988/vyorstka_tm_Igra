@@ -245,10 +245,15 @@ function pp_gallery_remove($id) {
     };
     $res1=$res2[0];
 
+    $pp_gallery_get_query = "SELECT * FROM pp_gallery_data WHERE url = '{$res1->url}'";
+    $res2=$wpdb->get_results($pp_gallery_get_query);
+    if (count($res2)<=1):
     $path=ABSPATH.$res1->url;
     if (file_exists($path)){
         unlink($path);
     }
+    endif;
+
     $pp_gallery_get_query = "DELETE FROM pp_gallery_data WHERE id = '{$id}' ";
     $wpdb->query($pp_gallery_get_query);
     return json_encode($response);
