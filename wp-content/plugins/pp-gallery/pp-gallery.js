@@ -1,6 +1,24 @@
 window.onload = function () {
 
     (function($) {
+
+        $('.remove-all-pp-img').click(function (event) {
+            var removePostId = $(this).data('pp-id');
+            $.post('/wp-content/plugins/pp-gallery/', {removePostId: removePostId}, function (response) {
+                console.log('table.uk-table-striped');
+                if (response==1) {
+                    UIkit.notify("<div class='notify-suc'><i class='uk-icon-check'></i> Данные успешно удалены! </div>");
+                    $('table.uk-table-striped').hide(200);
+                }
+                else
+                {
+                    UIkit.notify("<div class='notify-err'><i class='uk-icon-remove'></i> Данные не были удалены! <br> Или изменены! </div>");
+
+                }
+            });
+        });
+
+
         $('.remove-pp-img').click(function (event) {
             var removeId = $(this).data('pp-id');
             $.post('/wp-content/plugins/pp-gallery/', {removeId: removeId}, function (response) {

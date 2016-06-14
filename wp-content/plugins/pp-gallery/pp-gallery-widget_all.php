@@ -44,8 +44,8 @@
                                     <textarea name="description<?=$val->id; ?>" id="description<?=$val->id; ?>" ><?=$val->description?></textarea>
                                 </td>
                                 <td>
-                                    <i class="uk-icon-remove remove-pp-img"  data-pp-id="<?=$val->id; ?>"></i>
-                                    <i class="uk-icon-save edit-pp-img" data-pp-id="<?=$val->id; ?>" ></i>
+                                    <i class="uk-icon-remove remove-pp-img" title="Удалить данное изображение" data-pp-id="<?=$val->id; ?>"></i>
+                                    <i class="uk-icon-save edit-pp-img" title="Сохранить изменения"   data-pp-id="<?=$val->id; ?>" ></i>
                                 </td>
                             </tr>
                         <?php endif; endforeach;?>

@@ -17,6 +17,10 @@ if(isset($_FILES['files'])) {
     pp_gallery_upload();
 }
 
+if(isset($_POST['removePostId'])) {
+    echo pp_gallery_remove_all($_POST['removePostId']);
+}
+
 if(isset($_POST['removeId'])) {
     echo pp_gallery_remove($_POST['removeId']);
 }
@@ -141,7 +145,8 @@ function pp_gallery_upload() {
         foreach($pp_upload_data['images']['error'] as $key => $value) {
             if($value == 0) {
                 $target_dir = ABSPATH . "/wp-content/uploads/pp_gallery/" . $pp_upload_data['id'] . '/';
-                $target_file = $target_dir . basename($pp_upload_data['images']["name"][$key]);
+                $target_file = $target_dir . str_replace(' ','-',$pp_upload_data['images']["name"][$key]);
+                file_put_contents('text.txt',$target_file);
                 $uploadOk = 1;
 
                 // Check if $uploadOk is set to 0 by an error
@@ -154,7 +159,7 @@ function pp_gallery_upload() {
                     }
 
                     if (move_uploaded_file($pp_upload_data['images']["tmp_name"][$key], $target_file)) {
-                        $name=basename($pp_upload_data['images']["name"][$key]);
+                        $name=str_replace(' ','-',$pp_upload_data['images']["name"][$key]);
                         $fileUrl = "/wp-content/uploads/pp_gallery/" . $pp_upload_data['id'] . '/' . $name;
                         $name=explode('.',$name);
                         $name=$name[0];
@@ -209,6 +214,27 @@ function pp_gallery_get($id=false,$all_post=false,$order='pp_id') {
     return $wpdb->get_results($pp_gallery_get_query);
 }
 
+function pp_gallery_remove_all($id)
+{
+    global $wpdb;
+    $response = 0;
+    $pp_gallery_get_query = "SELECT * FROM pp_gallery_data WHERE pp_id = '{$id}'";
+    if ($res2 = $wpdb->get_results($pp_gallery_get_query)) {
+        $response = 1;
+    };
+
+    foreach ($res2 as $value):
+
+        $path = ABSPATH . $value->url;
+        if (file_exists($path)) {
+            unlink($path);
+        }
+    endforeach;
+    $pp_gallery_get_query = "DELETE FROM pp_gallery_data WHERE pp_id = '{$id}' ";
+    $wpdb->query($pp_gallery_get_query);
+    return json_encode($response);
+}
+
 function pp_gallery_remove($id) {
     global $wpdb;
     $response=0;
@@ -256,6 +282,7 @@ function my_enqueue($hook) {
     wp_enqueue_script( 'my_custom_notify', '/wp-content/plugins/pp-gallery/bower_components/uikit/js/components/notify.min.js' );
     wp_enqueue_script( 'my_custom_accordion', '/wp-content/plugins/pp-gallery/bower_components/uikit/js/components/accordion.min.js' );
     wp_enqueue_script( 'my_custom_lightbox', '/wp-content/plugins/pp-gallery/bower_components/uikit/js/components/lightbox.min.js' );
+    wp_enqueue_script( 'my_custom_lightbox', '/wp-content/plugins/pp-gallery/bower_components/uikit/js/components/slider.min.js' );
     wp_enqueue_script( 'my_custom_pp-gallery', '/wp-content/plugins/pp-gallery/pp-gallery.js' );
 
 }
