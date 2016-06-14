@@ -73,7 +73,7 @@
 								<div class="fh5co-v-col-2 fh5co-text arrow-right">
 									<h3><?=$value->post_title?></h3>
 									<span class="pricing"><?=get_field('price',$value->ID)?></span>
-									<p><?=mb_substr(strip_tags($value->post_content),0,128);?></p>
+									<p><?php $content=explode('<!--more-->',$value->post_content); echo $content[0]; ?></p>
 								</div>
 							</div>
 						</div>
