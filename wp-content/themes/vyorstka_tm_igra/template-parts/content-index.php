@@ -175,7 +175,6 @@ if($gallery):
 <?php endif; ?>
 
 <?php $post=get_comments(array('post_id'=>4,'status' => 'approve','numberposts'=>-1)); 
-if ($post):
 ?>
 <div id="fh5co-reviews" data-section="reviews"  data-stellar-background-ratio="0.5">
 	<div class="container">
@@ -196,7 +195,6 @@ if ($post):
 		</div>
 	</div>
 </div>
-<?php endif; ?>
 
 <?php if (!is_user_logged_in()): ?>
 <div id="fh5co-send-feed">
