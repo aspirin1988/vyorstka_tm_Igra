@@ -3,8 +3,9 @@
 		<div class="address-box to-animate-2">
 			<img src="<?=get_field('logo-f',4)?>" alt="logo">
 			<p>
-					<span>г. Алматы, ул. Шарипова 38, <br>
-					уг. Толе би</span> <br>
+					<span>
+						<?=get_field('address',4)?>
+					</span> <br>
 				<a href="tel:<?=get_field('phone-1',4)?>"><?=get_field('phone-1',4)?></a> <br>
 				<a href="tel:<?=get_field('phone-2',4)?>"><?=get_field('phone-2',4)?></a> <br>
 				<a href="mailto:<?=get_field('email',4)?>"><?=get_field('email',4)?></a>
@@ -45,7 +46,9 @@
 		</div>
 	</div>
 </div>
+<footer>
 
+</footer>
 
 <!-- jQuery -->
 <script src="<?php bloginfo('template_directory') ?>/public/js/jquery.min.js"></script>

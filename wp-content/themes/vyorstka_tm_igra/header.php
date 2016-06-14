@@ -67,7 +67,7 @@
 					<a href="#" data-nav-section="home" class="animated slideInLeft"><?=get_field('main',4)?></a>
 					<a href="#" data-nav-section="about" class="animated slideInUp"><?=get_field('about',4)?></a>
 					<a href="#" data-nav-section="courses" class="animated slideInDown"><?=get_field('cources',4)?></a>
-					<a href="#" data-nav-section="advantages" class="animated slideInUp"><?=get_field('Наша уникальность',4)?></a>
+					<a href="#" data-nav-section="advantages" class="animated slideInUp"><?=get_field('osob',4)?></a>
 					<a href="#" data-nav-section="gallery" class="animated slideInDown"><?=get_field('gallery',4)?></a>
 					<a href="#" data-nav-section="reviews" class="animated slideInUp"><?=get_field('rew',4)?></a>
 					<a href="#" data-nav-section="news" class="animated slideInDown"><?=get_field('news',4)?></a>

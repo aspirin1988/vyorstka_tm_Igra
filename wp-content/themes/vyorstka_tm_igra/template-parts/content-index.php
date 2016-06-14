@@ -48,124 +48,40 @@
 		</div>
 		<div class="row">
 			<div class="fh5co-grid">
-				<?php $post=get_posts(array('category_name'=>'courses','order'=>'id', 'numberposts'=>6 )); ?>
-				<div class="fh5co-v-half to-animate-2">
-					<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($post[0]->ID)?>)"></div>
-					<div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
-						<a href="<?=get_permalink($post[0]->ID)?>"><h3><?=$post[0]->post_title?></h3></a>
-						<span class="pricing"><?=get_field('price',$post[0]->ID)?></span>
-						<p><?=mb_substr(strip_tags($post[0]->post_content),0,128);?></p>
-					</div>
-				</div>
-				<div class="fh5co-v-half orange-background">
-					<div class="fh5co-h-row-2 to-animate-2">
-						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($post[1]->ID)?>)"></div>
-						<div class="fh5co-v-col-2 fh5co-text arrow-left">
-							<a href="<?=get_permalink($post[1]->ID)?>"><h3><?=$post[1]->post_title?></h3></a>
-							<span class="pricing"><?=get_field('price',$post[1]->ID)?></span>
-							<p><?=mb_substr(strip_tags($post[1]->post_content),0,128);?></p>
-						</div>
-					</div>
-					<div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
-						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($post[2]->ID)?>)"></div>
-						<div class="fh5co-v-col-2 fh5co-text arrow-right">
-							<a href="<?=get_permalink($post[2]->ID)?>"><h3><?=$post[2]->post_title?></h3></a>
-							<span class="pricing"><?=get_field('price',$post[2]->ID)?></span>
-							<p><?=mb_substr(strip_tags($post[2]->post_content),0,128);?></p>
-						</div>
-					</div>
-				</div>
-				<div class="fh5co-v-half">
-					<div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
-						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($post[3]->ID)?>)"></div>
-						<div class="fh5co-v-col-2 fh5co-text arrow-right">
-							<a href="<?=get_permalink($post[3]->ID)?>"><h3><?=$post[3]->post_title?></h3></a>
-							<span class="pricing"><?=get_field('price',$post[3]->ID)?></span>
-							<p><?=mb_substr(strip_tags($post[3]->post_content),0,128);?></p>
-						</div>
-					</div>
-					<div class="fh5co-h-row-2 to-animate-2">
-						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($post[4]->ID)?>)"></div>
-						<div class="fh5co-v-col-2 fh5co-text arrow-left">
-							<a href="<?=get_permalink($post[4]->ID)?>"><h3><?=$post[4]->post_title?></h3></a>
-							<span class="pricing"><?=get_field('price',$post[4]->ID)?></span>
-							<p><?=mb_substr(strip_tags($post[4]->post_content),0,128);?></p>
-						</div>
-					</div>
-				</div>
-				<div class="fh5co-v-half to-animate-2">
-					<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($post[5]->ID)?>)"></div>
-					<div class="fh5co-v-col-2 fh5co-text fh5co-special-1 arrow-left">
-						<a href="<?=get_permalink($post[5]->ID)?>"><h3><?=$post[5]->post_title?></h3></a>
-						<span class="pricing"><?=get_field('price',$post[5]->ID)?></span>
-						<p><?=mb_substr(strip_tags($post[5]->post_content),0,128);?></p>
-					</div>
-				</div>
-
-				<br> <br> <br>
+				<?php $post=get_posts(array('category_name'=>'courses','order'=>'id', 'numberposts'=>6 ));
+				foreach ($post as $value):
+					if(get_field('big',$value->ID)):
+				?>
 
 				<!--НАЧАЛО большое окно-->
 				<div class="fh5co-v-half to-animate-2">
-					<div class="fh5co-v-col-4 fh5co-bg-img" style="background-image: url(<?php bloginfo("template_directory") ?>/public/images/igra/courses-guy.jpg)"></div>
+					<div class="fh5co-v-col-4 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($value->ID)?>)"></div>
 				</div>
 				<div class="fh5co-v-half to-animate-2">
 					<div class="fh5co-v-col-4 fh5co-text fh5co-special-1 arrow-left">
-						<h3>Актёрское мастерство</h3>
-						<span class="pricing">20 000 тг в мес</span>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<a href="<?=get_permalink($value->ID)?>"><h3><?=$value->post_title?></h3></a>
+						<span class="pricing"><?=get_field('price',$value->ID)?></span>
+						<p><?=mb_substr(strip_tags($value->post_content),0,256);?></p>
 					</div>
 				</div>
 				<!--КОНЕЦ большое окно-->
+					<?php else: ?>
+						<!--НАЧАЛО маленькие окна-->
+						<div class="fh5co-v-half">
+							<div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
+								<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($value->ID)?>)"></div>
+								<div class="fh5co-v-col-2 fh5co-text arrow-right">
+									<h3><?=$value->post_title?></h3>
+									<span class="pricing"><?=get_field('price',$value->ID)?></span>
+									<p><?=mb_substr(strip_tags($value->post_content),0,128);?></p>
+								</div>
+							</div>
+						</div>
+						<!--КОНЕЦ маленькие окна-->
+					<?php endif; ?>
 
-				<!--НАЧАЛО маленькие окна-->
-				<div class="fh5co-v-half">
-					<div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
-						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?php bloginfo("template_directory") ?>/public/images/igra/courses-kids-laughting.jpg)"></div>
-						<div class="fh5co-v-col-2 fh5co-text arrow-right">
-							<h3>Вокал</h3>
-							<span class="pricing">индивидуальные занятия</span>
-							<p>Far far away, behind the word mountains.</p>
-						</div>
-					</div>
-				</div>
-				<!--КОНЕЦ маленькие окна-->
-				<!--НАЧАЛО маленькие окна-->
-				<div class="fh5co-v-half to-animate-2">
-					<div class="fh5co-h-row-2 to-animate-2">
-						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?php bloginfo("template_directory") ?>/public/images/igra/courses-two-girls.jpg)"></div>
-						<div class="fh5co-v-col-2 fh5co-text arrow-left">
-							<h3>Ментальная арифметика</h3>
-							<span class="pricing">12 000 тг в мес</span>
-							<p>Far far away, behind the word mountains.</p>
-						</div>
-					</div>
-				</div>
-				<!--КОНЕЦ маленькие окна-->
+				<?php endforeach; ?>
 
-				<!--НАЧАЛО маленькие окна-->
-				<div class="fh5co-v-half">
-					<div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
-						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?php bloginfo("template_directory") ?>/public/images/igra/courses-kids-laughting.jpg)"></div>
-						<div class="fh5co-v-col-2 fh5co-text arrow-right">
-							<h3>Вокал</h3>
-							<span class="pricing">индивидуальные занятия</span>
-							<p>Far far away, behind the word mountains.</p>
-						</div>
-					</div>
-				</div>
-				<!--КОНЕЦ маленькие окна-->
-				<!--НАЧАЛО маленькие окна-->
-				<div class="fh5co-v-half">
-					<div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
-						<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?php bloginfo("template_directory") ?>/public/images/igra/courses-kids-laughting.jpg)"></div>
-						<div class="fh5co-v-col-2 fh5co-text arrow-right">
-							<h3>Вокал</h3>
-							<span class="pricing">индивидуальные занятия</span>
-							<p>Far far away, behind the word mountains.</p>
-						</div>
-					</div>
-				</div>
-				<!--КОНЕЦ маленькие окна-->
 			</div>
 		</div>
 
@@ -309,36 +225,7 @@ if($gallery):
 
 			),4);
 		?>
-		<!--<div class="row">
-			<div class="col-md-4 to-animate-2">
-				<div class="form-group">
-					<label for="name">Имя</label>
-					<input id="name" class="form-control" placeholder="Имя" type="text">
-				</div>
-			</div>
-			<div class="col-md-4 to-animate-2">
-				<div class="form-group">
-					<label for="phoneNumber">Телефон</label>
-					<input id="phoneNumber" class="form-control" placeholder="номер телефона" type="text">
-				</div>
-			</div>
-			<div class="col-md-4 to-animate-2">
-				<div class="form-group">
-					<label for="email">Email</label>
-					<input id="email" class="form-control" placeholder="Email" type="email">
-				</div>
-			</div>
-			<div class="col-sm-12 to-animate-2">
-				<div class="form-group ">
-					<label for="message">Message</label>
-							<textarea name="" id="message" cols="30" rows="5" class="form-control"
-									  placeholder="Message"></textarea>
-				</div>
-				<div class="form-group">
-					<input class="btn btn-primary pull-right" value="Отправить" type="submit">
-				</div>
-			</div>
-		</div>-->
+		
 	</div>
 </div>
 <?php endif; ?>
