@@ -15,9 +15,9 @@
 			<h2><?=get_the_title()?></h2>
 			<div class="underline"></div>
 			<span class="pricing"><?=get_field('price')?></span>
-			<p>
-				<?=get_the_content()?>
-			</p>
+			<article>
+				<?php the_content()?>
+			</article>
 		</div>
 		<div class="col-sm-7 work-time">
 			<h2 class="text-center"><?=get_field('schedule-title')?></h2>
