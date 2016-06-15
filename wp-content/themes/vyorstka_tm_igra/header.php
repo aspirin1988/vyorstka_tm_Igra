@@ -84,9 +84,9 @@
 			<div class="fh5co-menu">
 				<a href="<?=get_permalink(4)?>"><?=get_field('main',4)?></a>
 				<a href="<?=get_permalink(4)?>#fh5co-about"><?=get_field('about',4)?></a>
-				<a href="<?=get_permalink(4)?>#fh5co-courses"><?=get_field('cources',4)?></a>
+				<a href="<?=get_permalink(4)?>#fh5co-courses" class="<?php if ($post->slug == 'courses') { echo 'active';}?>"><?=get_field('cources',4)?></a>
 				<a href="<?=get_permalink(4)?>#fh5co-advantages"><?=get_field('osob',4)?></a>
-				<a href="<?=get_permalink(4)?>#fh5co-gallery"><?=get_field('gallery',4)?></a>
+				<a href="<?=get_permalink(4)?>#fh5co-gallery" class="<?php if ($post->slug == 'gallery') { echo 'active';}?>"><?=get_field('gallery',4)?></a>
 				<a href="<?=get_permalink(4)?>#fh5co-reviews"><?=get_field('rew',4)?></a>
 				<a href="<?=get_permalink(4)?>#fh5co-news"><?=get_field('news',4)?></a>
 				<a href="<?=get_permalink(4)?>#fh5co-footer"><?=get_field('contacts',4)?></a>
