@@ -59,7 +59,7 @@
 					<div class="fh5co-v-col-4 fh5co-text fh5co-special-1 arrow-left">
 						<a href="<?=get_permalink($value->ID)?>"><h3><?=$value->post_title?></h3></a>
 						<span class="pricing"><?=get_field('price',$value->ID)?></span>
-						<p><?=mb_substr(strip_tags($value->post_content),0,256);?></p>
+						<p><?=$value->post_excerpt?></p>
 					</div>
 				</div>
 				<!--КОНЕЦ большое окно-->
@@ -69,9 +69,9 @@
 							<div class="fh5co-h-row-2 <?php if(get_field('reversed',$value->ID)) echo 'fh5co-reversed '?> to-animate-2">
 								<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($value->ID)?>)"></div>
 								<div class="fh5co-v-col-2 fh5co-text arrow-<?php if(get_field('reversed',$value->ID)) echo 'right'; else echo 'left'; ?>" style="" >
-									<h3><?=$value->post_title?></h3>
+									<a href="<?=get_permalink($value->ID)?>"><h3><?=$value->post_title?></h3></a>
 									<span class="pricing"><?=get_field('price',$value->ID)?></span>
-									<p><?php $content=explode('<!--more-->',$value->post_content); echo $content[0]; ?></p>
+									<p><?=$value->post_excerpt ?></p>
 								</div>
 							</div>
 						</div>
