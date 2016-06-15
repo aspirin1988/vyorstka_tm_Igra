@@ -52,8 +52,6 @@
 				foreach ($post as $value):
 					if(get_field('big',$value->ID)):
 				?>
-
-				<!--НАЧАЛО большое окно-->
 				<div class="fh5co-v-half to-animate-2">
 					<div class="fh5co-v-col-4 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($value->ID)?>)"></div>
 				</div>
@@ -65,12 +63,12 @@
 					</div>
 				</div>
 				<!--КОНЕЦ большое окно-->
-					<?php else: ?>
+					<?php  else: ?>
 						<!--НАЧАЛО маленькие окна-->
 						<div class="fh5co-v-half">
-							<div class="fh5co-h-row-2 fh5co-reversed to-animate-2">
+							<div class="fh5co-h-row-2 <?php if(get_field('reversed',$value->ID)) echo 'fh5co-reversed '?> to-animate-2">
 								<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($value->ID)?>)"></div>
-								<div class="fh5co-v-col-2 fh5co-text arrow-right">
+								<div class="fh5co-v-col-2 fh5co-text arrow-<?php if(get_field('reversed',$value->ID)) echo 'right'; else echo 'left'; ?>" style="" >
 									<h3><?=$value->post_title?></h3>
 									<span class="pricing"><?=get_field('price',$value->ID)?></span>
 									<p><?php $content=explode('<!--more-->',$value->post_content); echo $content[0]; ?></p>
