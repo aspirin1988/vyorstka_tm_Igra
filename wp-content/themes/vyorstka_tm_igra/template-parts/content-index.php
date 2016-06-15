@@ -252,7 +252,7 @@ if($gallery):
 				<h3><?=$value->post_title?></h3>
 				<span class="fh5co-event-meta"><?=$value->post_date?></span>
 				<img src="<?=get_the_post_thumbnail_url($value->ID)?>" class="img-responsive">
-				<p><?=mb_substr(strip_tags($value->post_content),0,128);?></p>
+				<p><?php $text=explode('<!--more-->',$value->post_content); echo $text[0]; ?></p>
 				<p><a href="<?=get_permalink($value->ID)?>" class="btn btn-primary btn-outline">Читать далее</a></p>
 			</div>
 			<?php endforeach; ?>
