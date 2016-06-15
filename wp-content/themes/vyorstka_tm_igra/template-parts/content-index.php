@@ -136,7 +136,7 @@ if($gallery):
 				<div id="gallery-pp-oo" class="">
 					<?php foreach($gallery as $galleryItem) : ?>
 						<a href="<?=$galleryItem->url?>">
-							<img alt="Iphone Back"
+							<img alt="<?=$galleryItem->alt?>"
 								 src="<?=$galleryItem->url?>"
 								 data-image="<?=$galleryItem->url?>"
 								 style="display:none">
