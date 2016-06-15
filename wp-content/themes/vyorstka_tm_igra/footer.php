@@ -35,11 +35,11 @@
 		</ul>
 		<!--Кнока обратной связи:-->
 <!--		<a href="#" class="feedback to-animate-2"></a>-->
-		<div class="blink-cb-module-main-btns active search-blink-cb-module-btn" style="position: absolute; bottom: 120px">
+		<div class="blink-cb-module-main-btns active search-blink-cb-module-btn" style="position: fixed; bottom: 0; right: 0;">
 			<div class="blink-cb-module-btns-container">
 				<div class="blink-cb-module-main-btn-container animated" style="background: transparent">
 					<div class="blink-cb-open-popup blink-cb-module-main-btn">
-						<a href="#recall" class="feedback"></a>
+						<a href="#recall" style="bottom: -48px; right: -25px; " class="feedback"></a>
 					</div>
 				</div>
 			</div>
@@ -51,6 +51,7 @@
 </footer>
 
 <!-- jQuery -->
+<script type="text/javascript" src="https://callback.blink.kz/client/script/GET/"></script>
 <script src="<?php bloginfo('template_directory') ?>/public/js/jquery.min.js"></script>
 <!-- jQuery Easing -->
 <script src="<?php bloginfo('template_directory') ?>/public/js/jquery.easing.1.3.js"></script>
@@ -77,12 +78,8 @@
 <script src="<?php bloginfo('template_directory') ?>/public/js/imagelightbox.min.js"></script>
 <!-- Main JS -->
 <script src="<?php bloginfo('template_directory') ?>/public/js/main.js"></script>
-<script src="https://callback.blink.kz/resources/callback/js/mailer.js" ></script>
-<script>
-	var submitSMG = new BMModule();
-	submitSMG.submitForm(function(success) { $('.blink-mailer input[type=submit]').val('Отправить'); $('.success-mail-text').html(success); $('.blink-mailer').hide(500);  $('.success-mail-text').show(500);  }, function(error) {});
-</script>
-<script type="text/javascript" src="http://callback.blink.kz/client/script/GET/"></script>
+
+
 <script type='text/javascript' src="<?php bloginfo('template_directory') ?>/public/js/unitegallery.min.js"></script>
 
 <script type='text/javascript' src="<?php bloginfo('template_directory') ?>/public/js/ug-theme-tiles.js"></script>
@@ -97,6 +94,11 @@
 	});
 
 </script>
+<!--<script src="https://callback.blink.kz/resources/callback/js/mailer.js" ></script>-->
+<!--<script>-->
+<!--	var submitSMG = new BMModule();-->
+<!--	submitSMG.submitForm(function(success) { $('.blink-mailer input[type=submit]').val('Отправить'); $('.success-mail-text').html(success); $('.blink-mailer').hide(500);  $('.success-mail-text').show(500);  }, function(error) {});-->
+<!--</script>-->
 <?php wp_footer() ?>
 
 </body>
