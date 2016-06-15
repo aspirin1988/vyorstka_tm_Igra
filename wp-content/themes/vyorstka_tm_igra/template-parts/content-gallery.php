@@ -170,7 +170,7 @@ if($gallery):
 	</div>
 </div>
 
-<?php if (!is_user_logged_in()): ?>
+<?php //if (!is_user_logged_in()): ?>
 <div id="fh5co-send-feed">
 	<div class="container">
 		<div class="row text-center fh5co-heading">
@@ -180,21 +180,22 @@ if($gallery):
 		</div>
 
 			<?php
-			comment_form(array(
+			comment_form();
+			/*comment_form(array(
 				'fields'=>array(
 					'author'=>'
 						<div class="row">
 							<div class="col-md-4 to-animate-2">
 								<div class="form-group">
 									<label for="author">Имя</label><br>
-									<input id="author" class="form-control" name="author" type="text" placeholder="Имя фамилия" required>	
+									<input id="author" class="form-control" name="author" type="text" placeholder="Имя фамилия" required>
 								</div>
 							</div>',
 							'email'=>'
 							<div class="col-md-4 to-animate-2">
 								<div class="form-group">
 									<label for="url">Телефон</label><br>
-									<input id="url" class="form-control" name="url" type="text" placeholder="Телефон" required> 
+									<input id="url" class="form-control" name="url" type="text" placeholder="Телефон" required>
 								</div>
 							</div>',
 							'url'=>'
@@ -224,12 +225,12 @@ if($gallery):
 			</div>
 		</div>',
 
-			),4);
+			),4);*/
 		?>
 		
 	</div>
 </div>
-<?php endif; ?>
+<?php //endif; ?>
 
 <div id="fh5co-news" data-section="news"  data-stellar-background-ratio="0.5">
 	<div class="container">
