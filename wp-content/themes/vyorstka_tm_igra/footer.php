@@ -103,7 +103,7 @@
 <!--	var submitSMG = new BMModule();-->
 <!--	submitSMG.submitForm(function(success) { $('.blink-mailer input[type=submit]').val('Отправить'); $('.success-mail-text').html(success); $('.blink-mailer').hide(500);  $('.success-mail-text').show(500);  }, function(error) {});-->
 <!--</script>-->
-<?php wp_footer() ?>
+<?php //wp_footer() ?>
 
 </body>
 </html>

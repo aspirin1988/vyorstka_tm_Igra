@@ -40,7 +40,14 @@
 	<!--[if lt IE 9]>
 	<script src="<?php bloginfo('template_directory') ?>/public/js/respond.min.js"></script>
 	<![endif]-->
-
+	<style>
+		html { margin-top: 0 !important; }
+		* html body { margin-top: 0 !important; }
+		@media screen and ( max-width: 782px ) {
+			html { margin-top: 0 !important; }
+			* html body { margin-top: 0 !important; }
+		}
+	</style>
 </head>
 <body>
 
