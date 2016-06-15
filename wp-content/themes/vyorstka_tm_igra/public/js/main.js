@@ -1,8 +1,7 @@
 ;(function () {
 	
 	'use strict';
-
-
+	
 
 	// iPad and iPod detection	
 	var isiPad = function(){
@@ -550,7 +549,7 @@
 
 		}
 	};
-	
+
 
 
 	// Document on load.
@@ -578,6 +577,8 @@
 		newsAnimate();
 		sendFeedAnimate();
 		footerAnimate();
+
+
 
 		$(".owl-carousel-reviews").owlCarousel({
 			items: 3,

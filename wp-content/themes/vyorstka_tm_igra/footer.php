@@ -50,11 +50,15 @@
 
 </footer>
 
+
 <!-- jQuery -->
 <script type="text/javascript" src="https://callback.blink.kz/client/script/GET/"></script>
 <script src="<?php bloginfo('template_directory') ?>/public/js/jquery.min.js"></script>
 <!-- jQuery Easing -->
 <script src="<?php bloginfo('template_directory') ?>/public/js/jquery.easing.1.3.js"></script>
+
+<script src="<?php bloginfo('template_directory') ?>/public/js/ifItIsMobile.js"></script>
+
 <!-- Bootstrap -->
 <script src="<?php bloginfo('template_directory') ?>/public/js/bootstrap.min.js"></script>
 <!-- Bootstrap DateTimePicker -->
