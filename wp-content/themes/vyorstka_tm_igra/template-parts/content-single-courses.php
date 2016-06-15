@@ -90,7 +90,6 @@
 				<?php endif; ?>
 
 			</div>
-			<p class="subscription text-center"><?=get_the_excerpt()?></p>
 			<div class="shadow">
 				<img src="<?php bloginfo('template_directory') ?>/public/images/igra/courses/shadow-horizontal.png" class="img-responsive">
 			</div>
