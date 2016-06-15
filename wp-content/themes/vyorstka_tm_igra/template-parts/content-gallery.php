@@ -170,7 +170,6 @@ if($gallery):
 	</div>
 </div>
 
-<?php //if (!is_user_logged_in()): ?>
 <div id="fh5co-send-feed">
 	<div class="container">
 		<div class="row text-center fh5co-heading">
@@ -180,52 +179,7 @@ if($gallery):
 		</div>
 
 			<?php
-			comment_form();
-			/*comment_form(array(
-				'fields'=>array(
-					'author'=>'
-						<div class="row">
-							<div class="col-md-4 to-animate-2">
-								<div class="form-group">
-									<label for="author">Имя</label><br>
-									<input id="author" class="form-control" name="author" type="text" placeholder="Имя фамилия" required>
-								</div>
-							</div>',
-							'email'=>'
-							<div class="col-md-4 to-animate-2">
-								<div class="form-group">
-									<label for="url">Телефон</label><br>
-									<input id="url" class="form-control" name="url" type="text" placeholder="Телефон" required>
-								</div>
-							</div>',
-							'url'=>'
-							<div class="col-md-4 to-animate-2">
-								<div class="form-group">
-									<label for="email">Email</label><br>
-									<input id="email" class="form-control" name="email" type="email" placeholder="Email" required>
-								</div>
-							</div>',
-							'comment_field'=>'
-							<div class="col-sm-12 to-animate-2">
-								<div class="form-group ">
-									<label for="message">Message</label>
-									<textarea name="" id="message" cols="30" rows="5" class="form-control"
-												  placeholder="Message"></textarea>
-								</div>',
-				),
-				'title_reply'=>'',
-				'title_reply_before'=>'',
-				'title_reply_after'=>'',
-				'comment_field'=>'',
-				'comment_notes_before'=>'',
-				'submit_button'=>'
-			<div class="form-group">
-					<input class="btn btn-primary pull-right" value="Отправить" type="submit">
-				</div>
-			</div>
-		</div>',
-
-			),4);*/
+			
 		?>
 		
 	</div>

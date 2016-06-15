@@ -150,7 +150,8 @@ if($gallery):
 </div>
 <?php endif; ?>
 
-<?php $post=get_comments(array('post_id'=>4,'status' => 'approve','numberposts'=>-1)); 
+
+<?php $post=get_comments(array('post_id'=>4,'status' => 'approve','numberposts'=>-1));
 ?>
 <div id="fh5co-reviews" data-section="reviews"  data-stellar-background-ratio="0.5">
 	<div class="container">
@@ -159,6 +160,7 @@ if($gallery):
 				<h2 class="heading to-animate-2"><?=get_field('rew',4)?></h2>
 			</div>
 		</div>
+		<div class="owl-carousel-reviews">
 		<?php
 		foreach ($post as $value): ?>
 		<div class="fh5co-event to-animate-2">
@@ -167,8 +169,10 @@ if($gallery):
 			<p><?=$value->comment_content?></p>
 		</div>
 		<?php endforeach; ?>
+		</div>
 	</div>
 </div>
+
 
 <?php if (!is_user_logged_in()): ?>
 <div id="fh5co-send-feed">
@@ -190,26 +194,26 @@ if($gallery):
 									<input id="author" class="form-control" name="author" type="text" placeholder="Имя фамилия" required>	
 								</div>
 							</div>',
-							'email'=>'
+					'email'=>'
 							<div class="col-md-4 to-animate-2">
 								<div class="form-group">
 									<label for="url">Телефон</label><br>
 									<input id="url" class="form-control" name="url" type="text" placeholder="Телефон" required> 
 								</div>
 							</div>',
-							'url'=>'
+					'url'=>'
 							<div class="col-md-4 to-animate-2">
 								<div class="form-group">
 									<label for="email">Email</label><br>
 									<input id="email" class="form-control" name="email" type="email" placeholder="Email" required>
 								</div>
 							</div>',
-							'comment_field'=>'
+					'comment_field'=>'
 							<div class="col-sm-12 to-animate-2">
 								<div class="form-group ">
-									<label for="message">Message</label>
-									<textarea name="" id="message" cols="30" rows="5" class="form-control"
-												  placeholder="Message"></textarea>
+									<label for="message">Ваш комментарий</label>
+									<textarea name="comment" id="message" cols="30" rows="5" class="form-control"
+												  placeholder="Ваш комментарий"></textarea>
 								</div>',
 				),
 				'title_reply'=>'',
@@ -220,6 +224,8 @@ if($gallery):
 				'submit_button'=>'
 			<div class="form-group">
 					<input class="btn btn-primary pull-right" value="Отправить" type="submit">
+					<input type="hidden" name="comment_post_ID" value="4" id="comment_post_ID">
+					<input type="hidden" name="comment_parent" id="comment_parent" value="0">
 				</div>
 			</div>
 		</div>',
