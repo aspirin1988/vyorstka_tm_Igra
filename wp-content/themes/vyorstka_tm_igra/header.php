@@ -86,6 +86,5 @@
 				<a href="<?=get_permalink(4)?>#fh5co-footer"><?=get_field('contacts',4)?></a>
 			</div>
 		</div>
-
 	</div>
 	<?php } ?>
