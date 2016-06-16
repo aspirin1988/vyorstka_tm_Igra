@@ -7,7 +7,7 @@ window.mobilecheck = function() {
   return check;
 };
 
-if (window.mobilecheck()) {
+if (window.mobilecheck() && $(".animate")) {
 
   $(".animate").removeClass("animate");
   $(".animated").removeClass("animated");
