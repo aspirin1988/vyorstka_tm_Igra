@@ -174,16 +174,16 @@ p {
     top: 50%;
     margin-top: -212px;
     text-align: center; }
-    #fh5co-home .flexslider .fh5co-text .img-to-animate img.logo {
+    #fh5co-home .flexslider .fh5co-text .logo-container img.logo {
       margin: auto 0;
       max-width: 90%;
       margin-top: 7%; }
       @media screen and (max-width: 768px) {
-        #fh5co-home .flexslider .fh5co-text .img-to-animate img.logo {
+        #fh5co-home .flexslider .fh5co-text .logo-container img.logo {
           margin-top: 110px;
           padding: 0 20%; } }
       @media screen and (max-width: 480px) {
-        #fh5co-home .flexslider .fh5co-text .img-to-animate img.logo {
+        #fh5co-home .flexslider .fh5co-text .logo-container img.logo {
           margin-top: 150px;
           padding: 0 15% 0 15%; } }
   #fh5co-home .flexslider .background {
@@ -203,13 +203,13 @@ p {
     @media (max-width: 480px) {
       #fh5co-home .flexslider .background {
         min-height: 280px; } }
-    #fh5co-home .flexslider .background .logo-container {
+    #fh5co-home .flexslider .background .slogan-container {
       position: absolute;
       top: 50px;
       left: 50%;
       margin-left: -63px; }
       @media screen and (max-width: 768px) {
-        #fh5co-home .flexslider .background .logo-container {
+        #fh5co-home .flexslider .background .slogan-container {
           top: 5px;
           max-width: 56px;
           margin-left: -28px; } }

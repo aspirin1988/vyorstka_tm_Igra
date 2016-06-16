@@ -77,7 +77,7 @@
 	};
 
 	var scrolledWindow = function() {
-
+		
 		$(window).scroll(function(){
 
 			var scrollPos = $(this).scrollTop();

@@ -7,14 +7,14 @@
 		<div class="fh5co-text">
 			<div class="container">
 				<div class="row">
-					<div class="to-animate img-to-animate">
+					<div class="to-animate img-to-animate logo-container">
 						<img class="logo" src="<?=get_field('logo',4)?>">
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="background" style="background-image: url('<?=get_the_post_thumbnail_url($obj->ID)?>');" data-stellar-background-ratio="0.5">
-			<div class="to-animate img-to-animate logo-container hidden-md hidden-sm">
+			<div class="to-animate img-to-animate slogan-container hidden-md hidden-sm">
 				<img class="slogan img-responsive" src="<?php bloginfo("template_directory") ?>/public/images/igra/slogan.png" alt="Слоган">
 			</div>
 			<img class="audience" src="<?=get_field('audience',$obj->ID)?>">
