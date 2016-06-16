@@ -18,33 +18,3 @@ if (window.mobilecheck()) {
 }
 
 console.log($(".animate"));
-
-
-var animated = document.getElementsByClassName("animated");
-var toAnimate = document.getElementsByClassName("to-animate");
-var toAnimate2 = document.getElementsByClassName("to-animate-2");
-var imgToAnimate = document.getElementsByClassName("img-to-animate");
-/*
-console.log(animated);
-console.log(toAnimate);
-console.log(toAnimate2);
-
-for (var k = 0; k < animated.length; k++) {
-  animated[k].classList.remove("animated");
-}
-for (var f = 0; f < toAnimate.length; f++) {
-  toAnimate[f].classList.remove("to-animate");
-}
-for (var b = 0; b < toAnimate2.length; b++) {
-  toAnimate2[b].classList.remove("to-animate-2");
-}
-for (var c = 0; c < imgToAnimate.length; c++) {
-  toAnimate2[c].classList.remove("img-to-animate");
-}
-
-
-console.log(animated);
-console.log(toAnimate);
-console.log(toAnimate2);
-
- */
