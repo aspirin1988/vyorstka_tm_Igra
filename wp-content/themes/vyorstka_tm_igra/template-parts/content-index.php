@@ -13,11 +13,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="background" style="background-image: url('<?=get_the_post_thumbnail_url($obj->ID)?>');" data-stellar-background-ratio="0.5">
+		<div class="background" style="background-image: url(<?php bloginfo("template_directory") ?>/public/images/igra/audience.png), url('<?=get_the_post_thumbnail_url($obj->ID)?>');">
 			<div class="to-animate img-to-animate slogan-container hidden-md hidden-sm">
 				<img class="slogan img-responsive" src="<?php bloginfo("template_directory") ?>/public/images/igra/slogan.png" alt="Слоган">
 			</div>
-			<img class="audience" src="<?=get_field('audience',$obj->ID)?>">
+			<img class="audience" src="">
 		</div>
 
 	</div>
@@ -131,7 +131,7 @@ if($gallery):
 				<a href="<?=get_permalink(212)?>"><h2 class="heading to-animate"><?=get_field('gallery',4)?></h2></a>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row hidden-sm hidden-xs">
 			<div class="col-md-12">
 				<div id="gallery-pp-oo" class="">
 					<?php foreach($gallery as $galleryItem) : ?>
@@ -153,10 +153,10 @@ if($gallery):
 
 <?php $post=get_comments(array('post_id'=>4,'status' => 'approve','numberposts'=>-1));
 ?>
-<div id="fh5co-reviews" data-section="reviews"  data-stellar-background-ratio="0.5">
+<div id="fh5co-reviews" data-section="reviews">
 	<div class="container">
 		<div class="row text-center fh5co-heading">
-			<div class="col-md-8 col-md-offset-2 to-animate">
+			<div class="col-md-8 col-md-offset-2">
 				<h2 class="heading to-animate-2"><?=get_field('rew',4)?></h2>
 			</div>
 		</div>

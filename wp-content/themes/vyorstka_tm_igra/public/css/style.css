@@ -188,18 +188,23 @@ p {
           padding: 0 15% 0 15%; } }
   #fh5co-home .flexslider .background {
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 120% auto, cover;
+    background-position: 50% 100%, 50% 0;
     position: relative;
     overflow: hidden;
     height: 100vh; }
     @media (min-width: 1200px) {
       #fh5co-home .flexslider .background {
         text-align: center; } }
+    @media (max-width: 1200px) {
+      #fh5co-home .flexslider .background {
+        background-size: 150% auto, cover; } }
     @media (max-width: 767px) {
       #fh5co-home .flexslider .background {
-        background-position: 50% 0 !important;
+        background-position: 50% 100%, 50% 0 !important;
         height: auto;
-        min-height: 400px; } }
+        min-height: 400px;
+        background-size: 200% auto, cover; } }
     @media (max-width: 480px) {
       #fh5co-home .flexslider .background {
         min-height: 280px; } }
