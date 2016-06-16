@@ -33,6 +33,8 @@
 	<img src="<?php bloginfo('template_directory') ?>/public/images/igra/courses/shadow-big-horizontal.png" class="img-responsive">
 </div>
 
+<?php if(get_field('video')):?>
+
 <div class="container video-section">
 	<div class="video-container">
 		<div class='embed-container'>
@@ -40,5 +42,5 @@
 		</div>
 	</div>
 </div>
-
+<?php endif; ?>
 </div>
