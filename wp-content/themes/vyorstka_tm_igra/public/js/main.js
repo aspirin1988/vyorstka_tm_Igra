@@ -97,7 +97,7 @@
 			} else {
 				$('#fh5co-home .fh5co-text').css('display', 'block');
 			}
-		   
+
 
 		});
 
