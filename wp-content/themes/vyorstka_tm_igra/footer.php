@@ -1,4 +1,11 @@
 <div id="fh5co-footer" data-section="contacts">
+	<div class="container">
+		<div class="row text-center fh5co-heading">
+			<div class="col-md-8 col-md-offset-2 to-animate">
+				<h2 class="heading to-animate-2">Контакты</h2>
+			</div>
+		</div>
+	</div>
 	<div class="container map-background">
 		<div class="address-box to-animate-2">
 			<img src="<?=get_field('logo-f',4)?>" alt="logo">
@@ -46,6 +53,7 @@
 		</div>
 	</div>
 </div>
+
 <footer>
 
 </footer>

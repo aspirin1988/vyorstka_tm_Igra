@@ -237,7 +237,7 @@ if($gallery):
 </div>
 <?php endif; ?>
 
-<div id="fh5co-news" data-section="news"  data-stellar-background-ratio="0.5">
+<div id="fh5co-news" data-section="news">
 	<div class="container">
 		<div class="row text-center fh5co-heading">
 			<div class="col-md-8 col-md-offset-2 to-animate">

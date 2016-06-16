@@ -188,7 +188,7 @@ p {
           padding: 0 15% 0 15%; } }
   #fh5co-home .flexslider .background {
     background-repeat: no-repeat;
-    background-size: 120% auto, cover;
+    background-size: 150% auto, cover;
     background-position: 50% 100%, 50% 0;
     position: relative;
     overflow: hidden;
@@ -198,7 +198,7 @@ p {
         text-align: center; } }
     @media (max-width: 1200px) {
       #fh5co-home .flexslider .background {
-        background-size: 150% auto, cover; } }
+        background-size: 175% auto, cover; } }
     @media (max-width: 767px) {
       #fh5co-home .flexslider .background {
         background-position: 50% 100%, 50% 0 !important;
