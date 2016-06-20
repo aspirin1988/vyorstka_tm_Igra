@@ -106,11 +106,24 @@
 	});
 
 </script>
-<!--<script src="https://callback.blink.kz/resources/callback/js/mailer.js" ></script>-->
-<!--<script>-->
-<!--	var submitSMG = new BMModule();-->
-<!--	submitSMG.submitForm(function(success) { $('.blink-mailer input[type=submit]').val('Отправить'); $('.success-mail-text').html(success); $('.blink-mailer').hide(500);  $('.success-mail-text').show(500);  }, function(error) {});-->
-<!--</script>-->
+
+<p style="padding:0; margin:0; color:#fff;  font-size:14px"><strong>Адрес:</strong><br>
+	Режим работы:
+	<br>
+	Пн-Сб с 9:00 до 18:00
+	<br>
+	<br>
+	Мы в соц. сетях:
+	<a href="/"><img src="" alt="G+"></a>
+	<a href="/"><img src="" alt="FaceBook"></a>
+</p>
+
+</div>
+<script src="https://callback.blink.kz/resources/callback/js/mailer.js" ></script>
+<script>
+	var submitSMG = new BMModule();
+	submitSMG.submitForm(function(success) { $('.blink-mailer input[type=submit]').val('Отправить'); $('.success-mail-text').html(success); $('.blink-mailer').hide(500);  $('.success-mail-text').show(500);  }, function(error) {});
+</script>
 <?php //wp_footer() ?>
 
 </body>
