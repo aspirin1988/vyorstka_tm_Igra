@@ -327,6 +327,8 @@ p {
 			}
 			@media (max-width: 1200px) {
 				background-size: 175% auto, cover;
+				height: auto;
+				min-height: 600px;
 			}
 			@media (max-width: 767px) {
 				background-position: 50% 100%, 50% 0 !important;
@@ -467,6 +469,9 @@ p {
 	.fh5co-text {
 		padding: 2em 6em;
 		text-align: left;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
 		@media screen and (max-width: $screen-lg) {
 			padding: 1em;
 		}
