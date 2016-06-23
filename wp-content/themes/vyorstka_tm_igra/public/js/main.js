@@ -153,25 +153,24 @@
 
 	};
 
-	// Reflect scrolling in navigation
+
+	// Reflect scrolling in navigation ***
 	var navActive = function(section) {
-		
-		$('.fh5co-main-nav a[data-nav-section], #fh5co-offcanvas a[data-nav-section]').removeClass('active');
-		$('.fh5co-main-nav, #fh5co-offcanvas').find('a[data-nav-section="'+section+'"]').addClass('active');
-		
+			$('.fh5co-main-nav a[data-nav-section], #fh5co-offcanvas a[data-nav-section]').removeClass('active');
+			$('.fh5co-main-nav, #fh5co-offcanvas').find('a[data-nav-section="'+section+'"]').addClass('active');
 	};
 
 	var navigationSection = function() {
 
 		var $section = $('div[data-section]');
-		
+
 		$section.waypoint(function(direction) {
 		  	if (direction === 'down') {
-		    	navActive($(this.element).data('section'));
+						navActive($(this.element).data('section'));
 		  	}
 
 		}, {
-	  		offset: '150px'
+	  		offset: '380px'
 		});
 
 		$section.waypoint(function(direction) {
