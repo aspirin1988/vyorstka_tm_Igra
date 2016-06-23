@@ -322,10 +322,7 @@ p {
         width: 100%; } }
   #fh5co-about .fh5co-text {
     padding: 2em 6em;
-    text-align: left;
-    display: flex;
-    flex-flow: column;
-    justify-content: center; }
+    text-align: left; }
     @media screen and (max-width: 1200px) {
       #fh5co-about .fh5co-text {
         padding: 1em; } }
@@ -497,6 +494,16 @@ p {
       left: 50%;
       margin-left: -20px;
       background: white; }
+  #fh5co-courses .fh5co-grid .fh5co-text {
+    display: flex;
+    flex-flow: column;
+    justify-content: center; }
+    #fh5co-courses .fh5co-grid .fh5co-text p {
+      margin-top: 5px;
+      margin-bottom: 5px; }
+    #fh5co-courses .fh5co-grid .fh5co-text a {
+      font-size: .85em;
+      cursor: pointer; }
   #fh5co-courses .fh5co-grid .arrow-left:before, #fh5co-courses .fh5co-grid .arrow-left::before {
     content: "";
     position: absolute;

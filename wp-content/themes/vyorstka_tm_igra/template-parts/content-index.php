@@ -63,6 +63,7 @@
 						<a href="<?=get_permalink($value->ID)?>"><h3><?=$value->post_title?></h3></a>
 						<span class="pricing"><?=get_field('price',$value->ID)?></span>
 						<p><?=$value->post_excerpt?></p>
+						<a href="<?=get_permalink($value->ID)?>">Подробнее..</a>
 					</div>
 				</div>
 				<!--КОНЕЦ большое окно-->
@@ -75,6 +76,7 @@
 									<a href="<?=get_permalink($value->ID)?>"><h3><?=$value->post_title?></h3></a>
 									<span class="pricing"><?=get_field('price',$value->ID)?></span>
 									<p><?=$value->post_excerpt ?></p>
+									<a href="<?=get_permalink($value->ID)?>">Подробнее..</a>
 								</div>
 							</div>
 						</div>
