@@ -51,11 +51,14 @@
 		</div>
 		<div class="row">
 			<div class="fh5co-grid">
-				<?php $post=get_posts(array('category_name'=>'courses','order'=>'id', 'numberposts'=>6 ));
+				<?php $post=get_posts(array('category_name'=>'courses','orderby'=>'date', 'order'=>'DESC', 'numberposts'=>6 ));
 				foreach ($post as $value):
 					if(get_field('big',$value->ID)):
-				?>
-				<div class="fh5co-v-half to-animate-2">
+
+						if(get_field('reversed',$value->ID)):
+						?>
+
+				<div class="fh5co-v-half  to-animate-2">
 					<div class="fh5co-v-col-4 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($value->ID)?>)"></div>
 				</div>
 				<div class="fh5co-v-half to-animate-2">
@@ -66,6 +69,19 @@
 						<a href="<?=get_permalink($value->ID)?>" class="btn btn-primary btn-outline">Подробнее</a>
 					</div>
 				</div>
+				<?php else: ?>
+				<div class="fh5co-v-half to-animate-2" style="z-index: 9999">
+					<div class="fh5co-v-col-4 fh5co-text fh5co-special-1 arrow-right">
+						<a href="<?=get_permalink($value->ID)?>"><h3><?=$value->post_title?></h3></a>
+						<span class="pricing"><?=get_field('price',$value->ID)?></span>
+						<p><?=$value->post_excerpt?></p>
+						<a href="<?=get_permalink($value->ID)?>" class="btn btn-primary btn-outline">Подробнее</a>
+					</div>
+				</div>
+				<div class="fh5co-v-half  to-animate-2">
+					<div class="fh5co-v-col-4 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($value->ID)?>)"></div>
+				</div>
+				<?php endif; ?>
 				<!--КОНЕЦ большое окно-->
 					<?php  else: ?>
 						<!--НАЧАЛО маленькие окна-->
