@@ -685,6 +685,10 @@ p {
 			a {
 				font-size: .85em;
 				cursor: pointer;
+				align-self: center;
+				padding: 6px 12px;
+				letter-spacing: normal;
+				text-transform: none;
 			}
 		}
 		.arrow-left {

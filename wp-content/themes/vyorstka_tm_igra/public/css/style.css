@@ -503,7 +503,11 @@ p {
       margin-bottom: 5px; }
     #fh5co-courses .fh5co-grid .fh5co-text a {
       font-size: .85em;
-      cursor: pointer; }
+      cursor: pointer;
+      align-self: center;
+      padding: 6px 12px;
+      letter-spacing: normal;
+      text-transform: none; }
   #fh5co-courses .fh5co-grid .arrow-left:before, #fh5co-courses .fh5co-grid .arrow-left::before {
     content: "";
     position: absolute;
