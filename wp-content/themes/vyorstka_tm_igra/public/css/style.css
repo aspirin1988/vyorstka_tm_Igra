@@ -313,7 +313,7 @@ p {
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
   width: 100%;
-  max-width: 1920px;
+  max-width: 1170px;
   margin: 0 auto; }
   #fh5co-about .fh5co-2col {
     width: 50%; }
@@ -321,7 +321,7 @@ p {
       #fh5co-about .fh5co-2col {
         width: 100%; } }
   #fh5co-about .fh5co-text {
-    padding: 2em 6em;
+    padding: 1em 3em;
     text-align: left; }
     @media screen and (max-width: 1200px) {
       #fh5co-about .fh5co-text {
