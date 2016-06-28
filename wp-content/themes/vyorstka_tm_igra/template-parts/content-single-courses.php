@@ -179,11 +179,11 @@ if ($gallery):
 				<input type="hidden" name="title" value="Запись на приём">
 				<div class="form-group">
 					<label for="name">Имя</label>
-					<input id="name" class="form-control" name="Имя" placeholder="Ваше имя" type="text">
+					<input id="name" class="form-control" required="required" name="Имя" placeholder="Ваше имя" type="text">
 				</div>
 				<div class="form-group">
-					<label for="email">Телефон</label>
-					<input id="email" class="form-control" name="Телефона" placeholder="Номер телефона" type="tel">
+					<label for="phone">Телефон</label>
+					<input id="phone" class="form-control" name="Телефон" placeholder="Номер телефона +7-XXX-XXX-XX-XX" type="tel" required="required" pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" >
 				</div>
 				<div class="form-group">
 					<label for="courseType">Выбор курса</label>
