@@ -9,6 +9,13 @@
 <!--КОНЕЦ breadcrumbs-->
 
 <!--НАЧАЛО описание и расписание-->
+<?php if (get_field('gb-top-c')&&get_field('gb-bottom-c')):?>
+<style>
+	#summary-and-work-time .summary {
+		background-image: linear-gradient(to bottom, <?=get_field('gb-top-c')?> 0%, <?=get_field('gb-bottom-c')?> 100%);
+	}
+</style>
+<?php endif; ?>
 <div id="summary-and-work-time" class="container">
 	<div class="row">
 		<div class="col-sm-5 summary">

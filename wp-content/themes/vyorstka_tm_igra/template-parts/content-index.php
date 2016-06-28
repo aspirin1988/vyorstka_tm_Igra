@@ -58,11 +58,16 @@
 						if(get_field('reversed',$value->ID)):
 						?>
 
-				<div class="fh5co-v-half  to-animate-2">
+				<div class="fh5co-v-half  to-animate-2" >
 					<div class="fh5co-v-col-4 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($value->ID)?>)"></div>
 				</div>
-				<div class="fh5co-v-half to-animate-2">
-					<div class="fh5co-v-col-4 fh5co-text fh5co-special-1 arrow-left">
+				<div class="fh5co-v-half to-animate-2" style="<?php $bgC=get_field('blok-color',$value->ID); if ($bgC) echo "background:{$bgC};"; ?>">
+					<style>
+						#v-half<?=$value->ID?>:before {
+							border-right-color: <?=$bgC?> !important;
+						}
+					</style>
+					<div id="v-half<?=$value->ID?>" class="fh5co-v-col-4 fh5co-text fh5co-special-1 arrow-left">
 						<a href="<?=get_permalink($value->ID)?>"><h3><?=$value->post_title?></h3></a>
 						<span class="pricing"><?=get_field('price',$value->ID)?></span>
 						<p><?=$value->post_excerpt?></p>
@@ -70,8 +75,13 @@
 					</div>
 				</div>
 				<?php else: ?>
-				<div class="fh5co-v-half to-animate-2" style="z-index: 9999">
-					<div class="fh5co-v-col-4 fh5co-text fh5co-special-1 arrow-right">
+				<div class="fh5co-v-half to-animate-2" style="z-index: 9999; <?php $bgC=get_field('blok-color',$value->ID); if ($bgC) echo "background:{$bgC};"; ?>">
+					<style>
+						#v-half<?=$value->ID?>:before {
+							border-left-color: <?=$bgC?> !important;
+						}
+					</style>
+					<div id="v-half<?=$value->ID?>" class="fh5co-v-col-4 fh5co-text fh5co-special-1 arrow-right"  >
 						<a href="<?=get_permalink($value->ID)?>"><h3><?=$value->post_title?></h3></a>
 						<span class="pricing"><?=get_field('price',$value->ID)?></span>
 						<p><?=$value->post_excerpt?></p>
@@ -85,10 +95,15 @@
 				<!--КОНЕЦ большое окно-->
 					<?php  else: ?>
 						<!--НАЧАЛО маленькие окна-->
-						<div class="fh5co-v-half">
+						<div class="fh5co-v-half" style="<?php $bgC=get_field('blok-color',$value->ID); if ($bgC) echo "background:{$bgC};"; ?>">
 							<div class="fh5co-h-row-2 <?php if(get_field('reversed',$value->ID)) echo 'fh5co-reversed '?> to-animate-2">
 								<div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($value->ID)?>)"></div>
-								<div class="fh5co-v-col-2 fh5co-text arrow-<?php if(get_field('reversed',$value->ID)) echo 'right'; else echo 'left'; ?>" style="" >
+								<style>
+									#v-half<?=$value->ID?>:before {
+										border-<?php if(get_field('reversed',$value->ID)) echo 'left'; else echo 'right'; ?>-color: <?=$bgC?> !important;
+									}
+								</style>
+								<div id="v-half<?=$value->ID?>" class="fh5co-v-col-2 fh5co-text arrow-<?php if(get_field('reversed',$value->ID)) echo 'right'; else echo 'left'; ?>" style="" >
 									<a href="<?=get_permalink($value->ID)?>"><h3><?=$value->post_title?></h3></a>
 									<span class="pricing"><?=get_field('price',$value->ID)?></span>
 									<p><?=$value->post_excerpt ?></p>
