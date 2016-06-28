@@ -115,7 +115,7 @@
 if ($gallery):
 ?>
 <!--НАЧАЛО фотоогалерея-->
-<div id="gallery-on-courses">
+<!--<div id="gallery-on-courses">
 	<div class="container">
 		<div class="row text-center fh5co-heading">
 			<div class="col-md-8 col-md-offset-2">
@@ -125,16 +125,16 @@ if ($gallery):
 
 		<div class="owl-carousel-on-courses">
 			<?php
-			foreach ($gallery as $value):
-			?>
-			<a href="<?=$value->url?>" data-imagelightbox="f">
-				<div style="background-image: url(<?=$value->url?>)"></div>
+/*			foreach ($gallery as $value):
+			*/?>
+			<a href="<?/*=$value->url*/?>" data-imagelightbox="f">
+				<div style="background-image: url(<?/*=$value->url*/?>)"></div>
 			</a>
-			<?php endforeach; ?>
+			<?php /*endforeach; */?>
 		</div>
 
 	</div>
-</div>
+</div>-->
 <!--КОНЕЦ фотоогалерея-->
 
 <!--НАЧАЛО видеогалерея-->
