@@ -65,8 +65,8 @@ p {
   color: #fb6e14;
   border: 2px solid #fb6e14; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-    background: #f16104 !important;
-    border-color: #f16104 !important; }
+    background: #f16104;
+    border-color: #f16104; }
   .btn-primary.btn-outline {
     background: transparent;
     color: #fb6e14;
@@ -510,6 +510,9 @@ p {
       text-transform: none;
       border-color: white;
       color: white; }
+      #fh5co-courses .fh5co-grid .fh5co-text a.btn.btn-primary:hover {
+        color: #333;
+        background: white; }
   #fh5co-courses .fh5co-grid .arrow-left:before, #fh5co-courses .fh5co-grid .arrow-left::before {
     content: "";
     position: absolute;
