@@ -95,6 +95,7 @@
 <script type='text/javascript' src="<?php bloginfo('template_directory') ?>/public/js/unitegallery.min.js"></script>
 
 <script type='text/javascript' src="<?php bloginfo('template_directory') ?>/public/js/ug-theme-tiles.js"></script>
+<script type='text/javascript' src="<?php bloginfo('template_directory') ?>/public/js/scripts.js"></script>
 <script type="text/javascript">
 
 	jQuery(document).ready(function(){
@@ -114,6 +115,15 @@
 <?=get_field('google',4)?>
 <?=get_field('yandex',4)?>
 <?php //wp_footer() ?>
+<script>
+	$('input[type="tel"]').mask('+7(999) 999-99-99', {
+		autoclear: false,
+		placeholder: 'X',
+		completed:function(){
+			setvalid($(this), true);
+		}
 
+	});
+</script>
 </body>
 </html>
