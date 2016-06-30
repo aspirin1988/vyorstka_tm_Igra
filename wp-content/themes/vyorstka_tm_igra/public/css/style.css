@@ -175,41 +175,43 @@ p {
     margin-top: -212px;
     text-align: center; }
     #fh5co-home .flexslider .fh5co-text .logo-container img.logo {
-      margin: auto 0;
-      max-width: 90%;
-      margin-top: 7%; }
+      max-width: 50%;
+      margin-top: 4%;
+      margin-left: -4%;
+      padding: 0 15px; }
+      @media screen and (min-width: 1400px) {
+        #fh5co-home .flexslider .fh5co-text .logo-container img.logo {
+          margin-top: 0; } }
       @media screen and (max-width: 768px) {
         #fh5co-home .flexslider .fh5co-text .logo-container img.logo {
-          margin-top: 110px;
-          padding: 0 20%; } }
+          margin-top: 135px; } }
       @media screen and (max-width: 480px) {
         #fh5co-home .flexslider .fh5co-text .logo-container img.logo {
-          margin-top: 150px;
-          padding: 0 15% 0 15%; } }
+          margin-top: 170px; } }
   #fh5co-home .flexslider .background {
     background-repeat: no-repeat;
-    background-size: 150% auto, cover;
-    background-position: 50% 100%, 50% 0;
-    position: relative;
-    overflow: hidden;
-    height: 100vh; }
+    background-size: 100% 100%;
+    background-position: 50% 0;
+    position: relative; }
     @media (min-width: 1200px) {
       #fh5co-home .flexslider .background {
         text-align: center; } }
     @media (max-width: 1200px) {
       #fh5co-home .flexslider .background {
-        background-size: 175% auto, cover;
+        background-size: 100% 100%;
         height: auto;
-        min-height: 600px; } }
+        min-height: inherit; } }
     @media (max-width: 767px) {
       #fh5co-home .flexslider .background {
-        background-position: 50% 100%, 50% 0 !important;
+        background-position: 50% 0 !important;
         height: auto;
-        min-height: 400px;
-        background-size: 200% auto, cover; } }
+        min-height: inherit;
+        background-size: 100% 100%; } }
     @media (max-width: 480px) {
       #fh5co-home .flexslider .background {
-        min-height: 280px; } }
+        min-height: inherit; } }
+    #fh5co-home .flexslider .background .opacity-helper-img {
+      width: 100%; }
     #fh5co-home .flexslider .background .slogan-container {
       position: absolute;
       top: 50px;

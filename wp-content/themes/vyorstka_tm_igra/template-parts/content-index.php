@@ -5,19 +5,16 @@
 
 		<div class="fh5co-overlay"></div>
 		<div class="fh5co-text">
-			<div class="container">
-				<div class="row">
-					<div class="to-animate img-to-animate logo-container">
-						<img class="logo" src="<?=get_field('logo',4)?>">
-					</div>
-				</div>
+			<div class="to-animate img-to-animate logo-container">
+				<img class="logo" src="<?=get_field('logo',4)?>">
 			</div>
 		</div>
-		<div class="background" style="background-image: url(<?php bloginfo("template_directory") ?>/public/images/igra/audience.png), url('<?=get_the_post_thumbnail_url($obj->ID)?>');">
+		<div class="background" style="background-image: /* url(<?php bloginfo("template_directory") ?>/public/images/igra/audience.png) ,*/ url('<?=get_the_post_thumbnail_url($obj->ID)?>');">
 			<div class="to-animate img-to-animate slogan-container hidden-md hidden-sm">
 				<img class="slogan img-responsive" src="<?php bloginfo("template_directory") ?>/public/images/igra/slogan.png" alt="Слоган">
 			</div>
 			<img class="audience" src="">
+			<img src="<?=get_the_post_thumbnail_url($obj->ID)?>" class="img-responsive opacity-helper-img" style="opacity: 0">
 		</div>
 
 	</div>
