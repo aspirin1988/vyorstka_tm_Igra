@@ -392,6 +392,45 @@
 		}
 	};
 
+	var videoGalleryAnimate = function() {
+		var videoGalleryAnimate = $('#fh5co-videogallery');
+		if ( videoGalleryAnimate.length > 0 ) {
+
+			videoGalleryAnimate.waypoint( function( direction ) {
+
+				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
+
+
+					setTimeout(function() {
+						videoGalleryAnimate.find('.to-animate').each(function( k ) {
+							var el = $(this);
+
+							setTimeout ( function () {
+								el.addClass('fadeInUp animated');
+							},  k * 200, 'easeInOutExpo' );
+
+						});
+					}, 200);
+
+					setTimeout(function() {
+						videoGalleryAnimate.find('.to-animate-2').each(function( k ) {
+							var el = $(this);
+
+							setTimeout ( function () {
+								el.addClass('fadeIn animated');
+							},  k * 200, 'easeInOutExpo' );
+
+						});
+					}, 500);
+
+					$(this.element).addClass('animated');
+
+				}
+			} , { offset: '80%' } );
+
+		}
+	};
+
 
 	var reviewsAnimate = function() {
 		var reviews = $('#fh5co-reviews');
@@ -572,10 +611,36 @@
 		featureAnimate();
 		advantagesAnimate();
 		galleryAnimate();
+		videoGalleryAnimate();
 		reviewsAnimate();
 		newsAnimate();
 		sendFeedAnimate();
 		footerAnimate();
+
+
+		$(".owl-carousel-videogallery").owlCarousel({
+			items: 3,
+			loop: true,
+			nav: true,
+			navText: [
+				"<img class='to-animate-2' src='/wp-content/themes/vyorstka_tm_igra/public/images/igra/arrow-left.png'>",
+				"<img class='to-animate-2' src='/wp-content/themes/vyorstka_tm_igra/public/images/igra/arrow-right.png'>"
+			],
+			responsive: { // responsive behaviour
+				0:{
+					items:1,
+					margin:15
+				},
+				768:{ // for example at 768 screen width, owl carousel will only show two items
+					items:2,
+					margin:20
+				},
+				1200:{
+					items:3,
+					margin:25
+				}
+			}
+		});
 
 
 
@@ -791,6 +856,35 @@
 				});
 		}
 		/* КОНЕЦ Image LightBox */
+
+		//массив с триггерами вызова модального окна с видео:
+		var videoModalCallers =
+			document.getElementsByClassName("videogallery-caller");
+
+		//здесь будет храниться ссылка data-src-iframe
+		// из вызванного триггера:
+		var link;
+		console.log(videoModalCallers);
+
+		if (videoModalCallers.length > 0) {
+
+			for (var i = 0; i < videoModalCallers.length; i++) {
+				videoModalCallers[i].addEventListener("click", function () {
+					link = this.getAttribute("data-src-iframe");
+				});
+			}
+
+			$('#videoModal')
+
+				.on('show.bs.modal', function (e) {
+					document.getElementById("iFrameVideo")
+						.setAttribute("src", link);
+				})
+				.on('hidden.bs.modal', function (e) {
+				document.getElementById("iFrameVideo")
+					.removeAttribute("src");
+			});
+		}
 
 	});
 

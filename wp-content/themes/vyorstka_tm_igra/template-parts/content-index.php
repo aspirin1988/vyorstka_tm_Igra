@@ -14,7 +14,7 @@
 				<img class="slogan img-responsive" src="<?php bloginfo("template_directory") ?>/public/images/igra/slogan.png" alt="Слоган">
 			</div>
 			<img class="audience" src="">
-			<img src="<?=get_the_post_thumbnail_url($obj->ID)?>" class="img-responsive opacity-helper-img" style="opacity: 0">
+			<img src="<?php bloginfo("template_directory") ?>/public/images/igra/depositphotos_56769687_Cinema_or-1.jpg" class="img-responsive opacity-helper-img" style="opacity: 0">
 		</div>
 
 	</div>
@@ -55,7 +55,7 @@
 						if(get_field('reversed',$value->ID)):
 						?>
 
-				<div class="fh5co-v-half  to-animate-2" >
+				<div class="fh5co-v-half  to-animate-2 hidden-xs" >
 					<div class="fh5co-v-col-4 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($value->ID)?>)"></div>
 				</div>
 				<div class="fh5co-v-half to-animate-2" style="<?php $bgC=get_field('blok-color',$value->ID); if ($bgC) echo "background:{$bgC};"; ?>">
@@ -69,6 +69,8 @@
 						<span class="pricing"><?=get_field('price',$value->ID)?></span>
 						<p><?=$value->post_excerpt?></p>
 						<a href="<?=get_permalink($value->ID)?>" class="btn btn-primary btn-outline">Подробнее</a>
+						<a href="<?=get_permalink($value->ID)?>/#subscribe" class="btn btn-primary btn-outline">Записаться на бесплатный урок</a>
+						<div class="xs-image-box visible-xs" style="background-image: url(<?=get_the_post_thumbnail_url($value->ID)?>)"></div>
 					</div>
 				</div>
 				<?php else: ?>
@@ -83,9 +85,11 @@
 						<span class="pricing"><?=get_field('price',$value->ID)?></span>
 						<p><?=$value->post_excerpt?></p>
 						<a href="<?=get_permalink($value->ID)?>" class="btn btn-primary btn-outline">Подробнее</a>
+						<a href="<?=get_permalink($value->ID)?>/#subscribe" class="btn btn-primary btn-outline">Записаться на бесплатный урок</a>
+						<div class="xs-image-box visible-xs" style="background-image: url(<?=get_the_post_thumbnail_url($value->ID)?>)"></div>
 					</div>
 				</div>
-				<div class="fh5co-v-half  to-animate-2">
+				<div class="fh5co-v-half  to-animate-2 hidden-xs">
 					<div class="fh5co-v-col-4 fh5co-bg-img" style="background-image: url(<?=get_the_post_thumbnail_url($value->ID)?>)"></div>
 				</div>
 				<?php endif; ?>
@@ -105,6 +109,7 @@
 									<span class="pricing"><?=get_field('price',$value->ID)?></span>
 									<p><?=$value->post_excerpt ?></p>
 									<a href="<?=get_permalink($value->ID)?>" class="btn btn-primary btn-outline">Подробнее</a>
+									<a href="<?=get_permalink($value->ID)?>/#subscribe" class="btn btn-primary btn-outline">Записаться на бесплатный урок</a>
 								</div>
 							</div>
 						</div>
@@ -179,6 +184,34 @@ if($gallery):
 	</div>
 </div>
 <?php endif; ?>
+
+
+<div id="fh5co-videogallery" data-section="videogallery">
+	<div class="container">
+		<div class="row text-center fh5co-heading row-padded">
+			<div class="col-md-8 col-md-offset-2">
+				<h2 class="heading to-animate">Видеогалерея</h2>
+			</div>
+		</div>
+		<div class="owl-carousel-videogallery">
+			<div>
+				<a href="#videoModal" data-toggle="modal" class="videogallery-caller" data-src-iframe="https://www.youtube.com/embed/sbBFDXifMmU">
+					<img src="<?php bloginfo("template_directory") ?>/public/images/igra/courses-girl-balet.jpg">
+				</a>
+			</div>
+			<div>
+				<a href="#videoModal" data-toggle="modal" class="videogallery-caller" data-src-iframe="https://www.youtube.com/embed/B0j4qH7AHTY">
+					<img src="<?php bloginfo("template_directory") ?>/public/images/igra/courses-girl-balet.jpg">
+				</a>
+			</div>
+			<div>
+				<a href="#videoModal" data-toggle="modal" class="videogallery-caller" data-src-iframe="https://www.youtube.com/embed/mSX_TPzTrBE">
+					<img src="<?php bloginfo("template_directory") ?>/public/images/igra/courses-girl-balet.jpg">
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 <?php $post=get_comments(array('post_id'=>4,'status' => 'approve','numberposts'=>-1));
@@ -290,4 +323,19 @@ if($gallery):
 	</div>
 </div>
 
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				<div class='embed-container'><iframe src='' frameborder='0' allowfullscreen id="iFrameVideo"></iframe></div>
+			</div>
+		</div>
+	</div>
 </div>

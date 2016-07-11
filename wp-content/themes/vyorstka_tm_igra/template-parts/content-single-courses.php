@@ -168,7 +168,7 @@ if ($gallery):
 <?php endif; ?>
 
 <!--НАЧАЛО запись на приём-->
-<div class="container subscribe">
+<div class="container subscribe" id="subscribe">
 	<div class="coupon">
 		<div class="coupon-content">
 			<h2 class="text-center"><?=get_field('enroll-title',4)?></h2>

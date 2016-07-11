@@ -279,6 +279,25 @@ p {
   }
 }
 
+
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 /*
  * Flexslider
  */
@@ -300,7 +319,7 @@ p {
 
 			.logo-container {
 				img.logo {
-					max-width: 50%;
+					max-width: 47%;
 					margin-top: 4%;
 					margin-left: -4%;
 					padding: 0 15px;
@@ -318,14 +337,14 @@ p {
 		}
 		.background {
 			background-repeat: no-repeat;
-			background-size: /* 150% auto,*/ 100% 100%;
+			background-size: /* 150% auto,*/ auto 100%;
 			background-position: /* 50% 100%,*/ 50% 0;
 			position: relative;
 			@media (min-width: 1200px) {
 				text-align: center;
 			}
 			@media (max-width: 1200px) {
-				background-size: /* 175% auto,*/ 100% 100%;
+				background-size: /* 175% auto,*/ auto 100%;
 				height: auto;
 				min-height: inherit;
 			}
@@ -333,7 +352,7 @@ p {
 				background-position: /*50% 100%,*/ 50% 0 !important;
 				height: auto;
 				min-height: inherit;
-				background-size: /*200% auto,*/ 100% 100%;
+				background-size: /*200% auto,*/ auto 100%;
 			}
 			@media (max-width: 480px) {
 				min-height: inherit;
@@ -351,7 +370,14 @@ p {
 					max-width: 56px;
 					margin-left: -28px;
 				}
-
+				@media screen and (min-width: 1600px) {
+					top: 75px;
+					width: 180px;
+					margin-left: -90px;
+					img {
+						width: 100%;
+					}
+				}
 			}
 
 			img.audience {
@@ -456,11 +482,11 @@ p {
 .about-wrapper {
 	background: #130d08 url(../images/igra/background-pattern.jpg) repeat;
 }
+
 #fh5co-about {
 	@include flex;
 	@include flexwrap;
 	width: 100%;
-	max-width: 1170px;
 	margin: 0 auto;
 	.fh5co-2col {
 		width: 50%;
@@ -650,7 +676,7 @@ p {
 		@include flexwrap;
 		h3 {
 			color: white;
-			font-size: 18px;
+			font-size: 24px;
 			text-transform: uppercase;
 			font-family: $font-family-base;
 			margin-bottom: 0;
@@ -750,6 +776,11 @@ p {
 			@media screen and (max-width: $screen-md) {
 				width: 100%;
 			}
+			.xs-image-box {
+				height: 300px;
+				background: 20% center/cover no-repeat;
+				margin: 15px -20px -20px -20px;
+			}
 			.fh5co-special-1 {
 				&.arrow-left {
 					&:before, &::before {
@@ -771,6 +802,7 @@ p {
 					background-repeat: no-repeat;
 					background-position: center center;
 					@media screen and (max-width: $screen-sm) {
+						order: 2;
 						min-height: 350px;
 					}
 				}
@@ -783,11 +815,13 @@ p {
 				width: 400%;
 				padding: 20px;
 				position: relative;
+				order: 1;
 				&.fh5co-bg-img {
 					background-size: cover;
 					background-repeat: no-repeat;
 					background-position: top center;
 					@media screen and (max-width: $screen-sm) {
+						order: 2;
 						width: 100%;
 						min-height: 350px;
 					}
@@ -818,6 +852,7 @@ p {
 						background-position: center center;
 						@media screen and (max-width: $screen-sm) {
 							min-height: 350px;
+							order: 2;
 						}
 					}
 				}
@@ -832,6 +867,7 @@ p {
 							right: inherit;
 							top: inherit;
 							bottom: inherit;
+							order: 2;
 						}
 					}
 				}
@@ -1632,6 +1668,43 @@ p {
 
 	button {
 		border: none;
+	}
+}
+
+#fh5co-videogallery {
+	background: url(../images/igra/background-pattern.jpg) repeat;
+	padding-bottom: 35px;
+	.fh5co-heading {
+		padding-bottom: 0;
+	}
+
+	.owl-carousel {
+		padding-left: 30px;
+		padding-right: 30px;
+		position: relative;
+		@media (max-width: 767px) {
+			padding: 0;
+		}
+		.owl-stage {
+			display: flex;
+		}
+		.owl-nav {
+			@media (max-width: 767px) {
+				display: none;
+			}
+			position: absolute;
+			top: 45%;
+			left: 0;
+			right: 0;
+			.owl-prev {
+				position: absolute;
+				left: 0;
+			}
+			.owl-next {
+				position: absolute;
+				right: 0;
+			}
+		}
 	}
 }
 
