@@ -350,6 +350,9 @@ p {
     @media screen and (max-width: 1200px) {
       #fh5co-about .fh5co-text {
         padding: 1em; } }
+    @media screen and (min-width: 1600px) {
+      #fh5co-about .fh5co-text {
+        padding: 2em 6em; } }
     #fh5co-about .fh5co-text .btn {
       color: #fff; }
     #fh5co-about .fh5co-text .heading {
@@ -537,6 +540,23 @@ p {
       #fh5co-courses .fh5co-grid .fh5co-text a.btn.btn-primary:hover {
         color: #333;
         background: white; }
+      #fh5co-courses .fh5co-grid .fh5co-text a[href*=subscribe] {
+        -webkit-animation: blink5 2s linear infinite;
+        animation: blink5 2s linear infinite; }
+@-webkit-keyframes blink5 {
+  0% {
+    color: #e6e6e6; }
+  50% {
+    color: #b7410e; }
+  100% {
+    color: #e6e6e6; } }
+@keyframes blink5 {
+  0% {
+    color: #e6e6e6; }
+  50% {
+    color: #b7410e; }
+  100% {
+    color: #e6e6e6; } }
   #fh5co-courses .fh5co-grid .arrow-left:before, #fh5co-courses .fh5co-grid .arrow-left::before {
     content: "";
     position: absolute;
@@ -943,12 +963,14 @@ p {
         width: 40px;
         height: 2px;
         margin-left: -20px; }
+    #fh5co-news .fh5co-event img {
+      margin: 0 0 15px; }
     #fh5co-news .fh5co-event p {
       font-size: 16px;
-      line-height: 1.4; }
-      #fh5co-news .fh5co-event p:last-child {
-        margin-top: auto;
-        margin-bottom: 0; }
+      line-height: 1.4;
+      margin: 15px 0; }
+    #fh5co-news .fh5co-event p.text-container {
+      margin: auto 0; }
     #fh5co-news .fh5co-event .btn {
       text-transform: none;
       font-size: 14px;
