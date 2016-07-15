@@ -194,21 +194,13 @@ if($gallery):
 			</div>
 		</div>
 		<div class="owl-carousel-videogallery">
+			<?php foreach (pp_gallery_get(312) as $video): ?>
 			<div>
-				<a href="#videoModal" data-toggle="modal" class="videogallery-caller" data-src-iframe="https://www.youtube.com/embed/sbBFDXifMmU">
-					<img src="<?php bloginfo("template_directory") ?>/public/images/igra/courses-girl-balet.jpg">
+				<a href="#videoModal" data-toggle="modal" class="videogallery-caller" data-src-iframe="<?=$video->description?>">
+					<img src="<?=$video->url?>">
 				</a>
 			</div>
-			<div>
-				<a href="#videoModal" data-toggle="modal" class="videogallery-caller" data-src-iframe="https://www.youtube.com/embed/B0j4qH7AHTY">
-					<img src="<?php bloginfo("template_directory") ?>/public/images/igra/courses-girl-balet.jpg">
-				</a>
-			</div>
-			<div>
-				<a href="#videoModal" data-toggle="modal" class="videogallery-caller" data-src-iframe="https://www.youtube.com/embed/mSX_TPzTrBE">
-					<img src="<?php bloginfo("template_directory") ?>/public/images/igra/courses-girl-balet.jpg">
-				</a>
-			</div>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </div>
