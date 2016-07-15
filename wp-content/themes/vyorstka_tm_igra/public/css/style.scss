@@ -726,6 +726,20 @@ p {
 					color: #333;
 					background: white;
 				}
+				&[href*=subscribe] {
+				-webkit-animation: blink5 2s linear infinite;
+				animation: blink5 2s linear infinite;
+				}
+				@-webkit-keyframes blink5 {
+					0% { color: rgb(230, 230, 230); }
+					50% { color: rgb(183, 65, 14); }
+					100% { color: rgb(230, 230, 230); }
+				}
+				@keyframes blink5 {
+					0% { color: rgb(230, 230, 230); }
+					50% { color: rgb(183, 65, 14); }
+					100% { color: rgb(230, 230, 230); }
+				}
 			}
 		}
 		.arrow-left {
@@ -877,7 +891,6 @@ p {
 			}
 		}
 	}
-
 }
 
 #fh5co-menus {

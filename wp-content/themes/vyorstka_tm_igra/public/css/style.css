@@ -540,6 +540,23 @@ p {
       #fh5co-courses .fh5co-grid .fh5co-text a.btn.btn-primary:hover {
         color: #333;
         background: white; }
+      #fh5co-courses .fh5co-grid .fh5co-text a[href*=subscribe] {
+        -webkit-animation: blink5 2s linear infinite;
+        animation: blink5 2s linear infinite; }
+@-webkit-keyframes blink5 {
+  0% {
+    color: #e6e6e6; }
+  50% {
+    color: #b7410e; }
+  100% {
+    color: #e6e6e6; } }
+@keyframes blink5 {
+  0% {
+    color: #e6e6e6; }
+  50% {
+    color: #b7410e; }
+  100% {
+    color: #e6e6e6; } }
   #fh5co-courses .fh5co-grid .arrow-left:before, #fh5co-courses .fh5co-grid .arrow-left::before {
     content: "";
     position: absolute;
