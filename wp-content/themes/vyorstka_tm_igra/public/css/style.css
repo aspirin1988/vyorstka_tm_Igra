@@ -530,6 +530,7 @@ p {
       margin-bottom: 5px; }
     #fh5co-courses .fh5co-grid .fh5co-text a {
       font-size: .85em;
+      margin-top: 5% !important;
       cursor: pointer;
       align-self: center;
       padding: 6px 12px;

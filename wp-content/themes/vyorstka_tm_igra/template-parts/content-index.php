@@ -69,7 +69,7 @@
 						<span class="pricing"><?=get_field('price',$value->ID)?></span>
 						<p><?=$value->post_excerpt?></p>
 						<a href="<?=get_permalink($value->ID)?>" class="btn btn-primary btn-outline">Подробнее</a>
-						<a href="<?=get_permalink($value->ID)?>/#subscribe" class="animated pulse btn btn-primary btn-outline">Записаться на бесплатный урок</a>
+						<a href="<?=get_permalink($value->ID)?>/#subscribe" class="animated pulse btn btn-primary btn-outline">Записаться на <br> бесплатный урок</a>
 						<div class="xs-image-box visible-xs" style="background-image: url(<?=get_the_post_thumbnail_url($value->ID)?>)"></div>
 					</div>
 				</div>
@@ -85,7 +85,7 @@
 						<span class="pricing"><?=get_field('price',$value->ID)?></span>
 						<p><?=$value->post_excerpt?></p>
 						<a href="<?=get_permalink($value->ID)?>" class="btn btn-primary btn-outline">Подробнее</a>
-						<a href="<?=get_permalink($value->ID)?>/#subscribe" class="animated pulse btn btn-primary btn-outline">Записаться на бесплатный урок</a>
+						<a href="<?=get_permalink($value->ID)?>/#subscribe" class="animated pulse btn btn-primary btn-outline">Записаться на <br> бесплатный урок</a>
 						<div class="xs-image-box visible-xs" style="background-image: url(<?=get_the_post_thumbnail_url($value->ID)?>)"></div>
 					</div>
 				</div>
@@ -109,7 +109,7 @@
 									<span class="pricing"><?=get_field('price',$value->ID)?></span>
 									<p><?=$value->post_excerpt ?></p>
 									<a href="<?=get_permalink($value->ID)?>" class="btn btn-primary btn-outline">Подробнее</a>
-									<a href="<?=get_permalink($value->ID)?>/#subscribe" class="animated pulse btn btn-primary btn-outline">Записаться на бесплатный урок</a>
+									<a href="<?=get_permalink($value->ID)?>/#subscribe" class="animated pulse btn btn-primary btn-outline">Записаться на <br> бесплатный урок</a>
 								</div>
 							</div>
 						</div>
