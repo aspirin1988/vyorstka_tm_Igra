@@ -38,7 +38,6 @@
 		</div>
 	</div>
 </div>
-
 <div id="fh5co-courses" data-section="courses">
 	<div class="container">
 		<div class="row text-center fh5co-heading row-padded">
